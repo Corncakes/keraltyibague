@@ -31,6 +31,7 @@ const paths = {
     bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
     popper: './node_modules/@popperjs/core/dist/umd/popper.min.js',
     barrio: '../../contrib/bootstrap_barrio/js/barrio.js',
+    tinyslider: './node_modules/tiny-slider/dist/min/tiny-slider.js',
     dest: './js'
   }
 }
@@ -68,7 +69,7 @@ function styles () {
 
 // Move the javascript files into our js folder
 function js () {
-  return gulp.src([paths.js.bootstrap, paths.js.popper, paths.js.barrio])
+  return gulp.src([paths.js.bootstrap, paths.js.popper, paths.js.barrio, paths.js.tinyslider])
     .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.stream())
 }

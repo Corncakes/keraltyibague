@@ -58,3 +58,14 @@ a {
 .slick>div {
     margin: 0 15px;
 }
+
+/* LOCAL TASKS 
+--------------------------------------------------*/
+
+.local-tasks {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+}
+
