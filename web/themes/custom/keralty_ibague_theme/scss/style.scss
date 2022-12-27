@@ -138,6 +138,8 @@ p {
 --------------------------------------------------*/
 
 .main-slider {
+    position: relative;
+    
     .tns-slider {
         .tns-item {
             position: relative;
@@ -553,7 +555,7 @@ footer {
 
 .view-encabezado {
     position: relative;
-    
+
     .views-field-field-imagen-de-detalle {
         img {
             width: 100%;
