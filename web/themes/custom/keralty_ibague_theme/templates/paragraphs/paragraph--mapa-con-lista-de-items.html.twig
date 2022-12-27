@@ -42,6 +42,7 @@
   set classes = [
     'paragraph',
     'container',
+    'mt-5',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
@@ -56,12 +57,12 @@
                     <h2>{{ content.field_titulo.0 }}</h2>
                 {% endif %}
             </div>
-            <div class="col-sm-12 col-md-8">
+            <div class="col-sm-12 col-md-8 col-lg-8 mapa">
                 {% if content.field_mapa|render is not empty %}
                     {{ content.field_mapa.0 }}
                 {% endif %}
             </div>
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-4 col-lg-3 d-flex align-items-center">
                 {% if content.field_texto_con_icono_para_mapa|render is not empty %}
                     {{ content.field_texto_con_icono_para_mapa }}
                 {% endif %}

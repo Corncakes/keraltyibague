@@ -51,7 +51,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mb-4">
                 {% if content.field_titulo|render is not empty %}
                     <h2>{{ content.field_titulo.0 }}</h2>
                 {% endif %}
@@ -59,12 +59,12 @@
                     <p>{{ content.field_cuerpo.0 }}</p>
                 {% endif %}
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 info d-flex align-items-center pt-3">
                 {% if content.field_texto_con_icono|render is not empty %}
                     {{ content.field_texto_con_icono }}
                 {% endif %}
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 video">
                 {% if content.field_video|render is not empty %}
                     {{ content.field_video.0 }}
                 {% endif %}

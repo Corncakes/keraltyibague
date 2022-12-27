@@ -41,17 +41,18 @@
 {%
   set classes = [
     'paragraph',
-    'container',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
 {% block paragraph %}
+  <div class="triangle mt-5"></div>
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      <div class="container py-5">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mb-4">
                 {% if content.field_titulo|render is not empty %}
                     <h2>{{ content.field_titulo.0 }}</h2>
                 {% endif %}
@@ -65,6 +66,7 @@
                 {% endif %}
             </div>
         </div>
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}

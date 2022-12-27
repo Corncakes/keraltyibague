@@ -50,21 +50,17 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-        <div class="row">
-            <div class="col-3 icono d-flex align-items-center">
-                {% if content.field_icono|render is not empty %}
-                    {{ content.field_icono.0 }}
-                {% endif %}
-            </div>
-            <div class="col-8">
-                {% if content.field_titulo|render is not empty %}
-                    <h4 class="titulo">{{ content.field_titulo.0 }}</h4>
-                {% endif %}
-                {% if content.field_cuerpo|render is not empty %}
-                    <p class="cuerpo">{{ content.field_cuerpo }}</p>
-                {% endif %}
-            </div>
+        <div class="titulo-container">
+            {% if content.field_icono|render is not empty %}
+                <div class="icono">{{ content.field_icono.0 }}</div>
+            {% endif %}
+            {% if content.field_titulo|render is not empty %}
+                <h4 class="titulo">{{ content.field_titulo.0 }}</h4>
+            {% endif %}
         </div>
+        {% if content.field_cuerpo|render is not empty %}
+            {{ content.field_cuerpo }}
+        {% endif %}
     {% endblock %}
   </div>
 {% endblock paragraph %}
