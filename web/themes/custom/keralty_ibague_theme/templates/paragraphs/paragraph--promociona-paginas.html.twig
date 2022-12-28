@@ -41,32 +41,35 @@
 {%
   set classes = [
     'paragraph',
+    'mt-5',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
 {% block paragraph %}
-  <div class="triangle mt-5"></div>
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      <div class="container py-5">
-        <div class="row">
-            <div class="col-12 text-center mb-4">
-                {% if content.field_titulo|render is not empty %}
-                    <h2>{{ content.field_titulo.0 }}</h2>
-                {% endif %}
-                {% if content.field_cuerpo|render is not empty %}
-                    <p>{{ content.field_cuerpo.0 }}</p>
-                {% endif %}
-            </div>
-            <div class="col-12">
-                {% if content.field_paginas|render is not empty %}
-                    {{ content.field_paginas }}
-                {% endif %}
-            </div>
+    <div class="triangle"></div>
+    <div class="promociona-paginas pb-3">
+      {% block content %}
+        <div class="container py-5">
+          <div class="row">
+              <div class="col-12 text-center mb-4">
+                  {% if content.field_titulo|render is not empty %}
+                      <h2>{{ content.field_titulo.0 }}</h2>
+                  {% endif %}
+                  {% if content.field_cuerpo|render is not empty %}
+                      <p>{{ content.field_cuerpo.0 }}</p>
+                  {% endif %}
+              </div>
+              <div class="col-12">
+                  {% if content.field_paginas|render is not empty %}
+                      {{ content.field_paginas }}
+                  {% endif %}
+              </div>
+          </div>
         </div>
-      </div>
-    {% endblock %}
+      {% endblock %}
+    </div>
   </div>
 {% endblock paragraph %}

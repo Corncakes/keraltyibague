@@ -42,7 +42,6 @@
   set classes = [
     'paragraph',
     'container',
-    'mt-5',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
@@ -52,14 +51,19 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
         <div class="row">
-            <div class="col-12 text-center mb-5">
+            <div class="col-12 text-center mb-4">
                 {% if content.field_titulo|render is not empty %}
                     <h2>{{ content.field_titulo.0 }}</h2>
                 {% endif %}
             </div>
-            <div class="col-sm-12">
-                {% if content.field_elementos_de_texto|render is not empty %}
-                    {{ content.field_elementos_de_texto }}
+            <div class="col-sm-12 col-md-6 imagen">
+                {% if content.field_imagen|render is not empty %}
+                    {{ content.field_imagen }}
+                {% endif %}
+            </div>
+            <div class="col-sm-12 col-md-6 video">
+                {% if content.field_cuerpo|render is not empty %}
+                    <p>{{ content.field_cuerpo }}</p>
                 {% endif %}
             </div>
         </div>
