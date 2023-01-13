@@ -89,6 +89,20 @@ p {
     background-size: 180px;
 }
 
+.more-link, .boton {
+    text-align: center;
+
+    a {
+        font: normal normal bold 15px/18px Roboto;
+        color: #FAFAFA;
+        background-color: #002D57;
+        border-radius: 25px;
+        padding: 0.7rem 2rem;
+        line-height: 1;    
+    }
+}
+
+
 /* LOCAL TASKS 
 --------------------------------------------------*/
 
@@ -130,7 +144,19 @@ p {
                     color: #ffffff;
                 }
             }
+
+            &:last-child {
+                a {
+                    border-right: none;
+                }
+            }
         }
+    }
+}
+
+#block-botonbuscar {
+    & * {
+        margin: 0;
     }
 }
 
@@ -234,6 +260,9 @@ p {
 
     .tns-controls {
         button {
+            background-color: #8CC63F;
+            border: none;
+            
             &:first-child {
                 position: absolute;
                 left: 0;
@@ -664,6 +693,53 @@ footer {
     }
 }
 
+.encabezado-node {
+    .content {
+        position: relative;
+
+        .field--type-entity-reference {
+            margin: 0;
+        }
+
+        .field--name-field-imagen {
+            img {
+                width: 100%;
+            }
+        }
+
+        .info-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(0,46,88,1), rgba(0,0,0,0));
+
+            .info {
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                .field--name-field-titulo {
+                    font: normal normal bold 42px/45px Hind;
+                    letter-spacing: 0.63px;
+                    color: #FAFAFA;
+                    margin-bottom: 1.2rem;
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 175px;
+        background: url('../images/ondacolores.png');
+        background-size: cover;
+        margin: 0 0 1.2rem;
+        display: block;
+    }
+}
 
 /* CUERPO PRINCIPAL
 --------------------------------------------------*/
@@ -1084,6 +1160,334 @@ footer {
     .imagen {
         img {
             border-radius: 30px;
+        }
+    }
+}
+
+
+/* VIEWS DETALLE DE NOTICIA
+--------------------------------------------------*/
+
+#block-views-block-servicios-destacados-block-2 {
+    .views-field-title {
+        background-image: linear-gradient(to right, rgba(0,139,186,1), rgba(34,186,204,1));
+        border-radius: 15px;
+        padding: 0.5rem 1.5rem;
+        margin-bottom: 1rem;
+
+        .servicio-destacado-item {
+            display: flex;
+            align-items: center;
+
+            .imagen {
+                margin-right: 1rem;
+            }
+
+            .titulo {
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+
+/* VIEWS DETALLE DE SERVICIO
+--------------------------------------------------*/
+
+#block-views-block-servicios-block-2 {
+    .info {
+        .titulo {
+
+        }
+
+        .texto {
+            p, li {
+                font: normal normal normal 16px/25px Roboto;
+                letter-spacing: 0px;
+                color: #434A67;
+                opacity: 1;
+            }
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 4rem;
+
+            .boton {
+                a {
+                    color: #002F87;
+                    background: #8BC63F;
+                }
+            }
+        }
+    }
+
+    .imagen {
+        img {
+            border-radius: 20px;
+        }
+    }
+}
+
+
+/* VIEWS DETALLE DE SERVICIO
+--------------------------------------------------*/
+
+#block-views-block-especialistas-block-1 {
+    .views-field-field-titulo-profesional {
+        color: #002F87;
+        margin-bottom: 2.5rem;
+    }
+
+    .imagen {
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    .texto {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 2.5rem;
+    }
+
+    .estudios {
+        h4 {
+            display: inline-block;
+            background: #0071A3;
+            padding: 0.5rem 1.5rem;
+            line-height: 1;
+            font: normal normal bold 1.25rem/1.875rem Roboto;
+            letter-spacing: 0.0225rem;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .item-list {
+            ul {
+                li {
+                    border: none;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .especialidades {
+        h4 {
+            display: inline-block;
+            background: #0071A3;
+            padding: 0.5rem 1.5rem;
+            line-height: 1;
+            font: normal normal bold 1.25rem/1.875rem Roboto;
+            letter-spacing: 0.0225rem;
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+        }
+
+        .item-list {
+            ul {
+                li {
+                    border: none;
+                    margin-bottom: 1.5rem;
+                    display: flex;
+
+                    &.list-group-item::before {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #5A9400;
+                        border-radius: 50%;
+                        flex: none;
+                        margin: 0.5rem 0.6rem 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .experiencia {
+        h4 {
+            display: inline-block;
+            background: #0071A3;
+            padding: 0.5rem 1.5rem;
+            line-height: 1;
+            font: normal normal bold 1.25rem/1.875rem Roboto;
+            letter-spacing: 0.0225rem;
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+        }
+
+        .item-list {
+            ul {
+                li {
+                    border: none;
+                    margin-bottom: 1.5rem;
+                    display: flex;
+
+                    &.list-group-item::before {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #5A9400;
+                        border-radius: 50%;
+                        flex: none;
+                        margin: 0.5rem 0.6rem 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* VIEWS DETALLE DE SERVICIO
+--------------------------------------------------*/
+
+#block-views-block-especialistas-block-2 {
+    margin: 5rem;
+
+    .views-field-field-imagen-de-detalle {
+        img {
+            border-radius: 10px;
+            border: 1px solid #777777;
+        }
+    }
+
+    .views-field-title {
+        margin-top: 1rem;
+
+        a {
+            font: normal normal bold 17px/25px Roboto;
+            letter-spacing: 0px;
+            color: #1E3D7B;
+        }
+    }
+
+    .views-field-field-titulo-profesional {
+        font: normal normal normal 13px/21px Roboto;
+        letter-spacing: 0px;
+        color: #000000;
+    }
+}
+
+
+/* BOTTOM FOOTER
+--------------------------------------------------*/
+
+.bottom-footer {
+    background-color: #048850;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .container-cols {
+        display: flex;
+        justify-content: space-between;
+
+        & * {
+            margin: 0;
+        }
+
+        .region-left-bottom-footer {
+            #block-logofooter {
+                img {
+                    width: 202px;
+                }
+            }
+        }
+
+        .region-right-bottom-footer {
+            display: flex;
+
+            #block-copyright {
+                width: auto;
+
+                .field--name-body {
+                    margin-top: 0.5rem;
+                }
+
+                & * {
+                    font: normal normal normal 14px/17px Roboto;
+                    letter-spacing: 0.21px;
+                    color: #FFFFFF;
+                }
+            }
+
+            #block-supersalud {
+                width: auto;
+
+                img {
+                    width: 137px;
+                }
+            }
+        }
+    }
+}
+
+
+/* SOCIAL FOOTER
+--------------------------------------------------*/
+
+#block-socialfooter {
+    display: flex;
+    justify-content: flex-end;
+
+    .field--name-body {
+        p {
+            font: normal normal bold 13px/24px Hind !important;
+            letter-spacing: 0.2px !important;
+            color: #FFFFFF !important;
+        }
+    }
+
+    .field--name-field-icons {
+        display: flex;
+        align-items:  flex-end;
+
+        & > .field__item {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+
+/* FAQ
+--------------------------------------------------*/
+
+.subtitulo-faq {
+    p {
+        text-align: center;
+        font: normal normal bold 36px/58px Hind;
+        letter-spacing: 0.54px;
+        color: #1E3D7B;
+    }
+}
+
+.field--name-field-accordion-items {
+    background: #eee;
+    padding: 4rem;
+
+    .accordion-item {
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .accordion-header {
+            .accordion-button {
+                background: #fff;
+                border: none;
+                box-shadow: none;
+
+                &:not(.collapsed) {
+                    color: #333;
+                }
+            }
         }
     }
 }
