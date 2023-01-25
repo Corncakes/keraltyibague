@@ -54,7 +54,7 @@
       {% block content %}
         <div class="container py-5">
           <div class="row">
-              <div class="col-12 text-center mb-4">
+              <div class="col-12 text-center mt-4 mb-5">
                   {% if content.field_titulo|render is not empty %}
                       <h2>{{ content.field_titulo.0 }}</h2>
                   {% endif %}
@@ -62,7 +62,7 @@
                       <p>{{ content.field_cuerpo.0 }}</p>
                   {% endif %}
               </div>
-              <div class="col-12">
+              <div class="col-12 mt-3">
                   {% if content.field_paginas|render is not empty %}
                       {{ content.field_paginas }}
                   {% endif %}

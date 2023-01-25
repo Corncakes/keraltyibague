@@ -52,12 +52,12 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mt-5 mb-5">
                 {% if content.field_titulo|render is not empty %}
                     <h2>{{ content.field_titulo.0 }}</h2>
                 {% endif %}
             </div>
-            <div class="col-sm-12 col-md-8 col-lg-8 mapa">
+            <div class="col-sm-12 col-md-8 col-lg-9 mapa">
                 {% if content.field_mapa|render is not empty %}
                     {{ content.field_mapa.0 }}
                 {% endif %}
