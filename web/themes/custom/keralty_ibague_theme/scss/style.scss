@@ -69,6 +69,10 @@ a {
 /* GENERAL
 --------------------------------------------------*/
 
+a {
+    text-decoration: none !important;
+}
+
 h2 {
     font: normal normal bold 36px/58px Hind;
     letter-spacing: 0.54px;
@@ -103,6 +107,12 @@ p {
     }
 }
 
+#scrollTopButton-image {
+    background: #5A9400 url(../images/arrow.svg) center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
 
 /* LOCAL TASKS 
 --------------------------------------------------*/
@@ -128,6 +138,7 @@ p {
 
     #CollapsingNavbar {
         height: 90px;
+        position: relative;
 
         #block-keralty-ibague-theme-main-menu {
             height: 100%;
@@ -473,6 +484,23 @@ p {
         }
     }
 
+    .inline-map {
+        display: inline-block;
+
+        .como-llegar {
+
+            .boton {
+                text-align: right;
+                margin-top: 1rem;
+
+                a {
+                    background-color: #8BC63F;
+                    color: #002D57;
+                }
+            }
+        }
+    }
+
     .field--name-field-texto-con-icono-para-mapa {
         width: 100%;
     }
@@ -512,6 +540,73 @@ p {
 }
 
 
+
+/* BUSCADOR
+--------------------------------------------------*/
+
+#block-formularioexpuestobusquedapage-1 {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding-top: 1.5rem;
+
+    form {
+        .form-item-search-api-fulltext {
+            margin-bottom: 0 !important;
+            position: relative;
+
+            label {
+                display: none;
+            }
+
+            input {
+                height: 50px;
+                border-radius: 30px;
+                padding-left: 2rem;
+            }
+        }
+
+        #edit-actions {
+            display: none;
+        }
+    }
+}
+
+.item-buscar {
+
+    .views-field-title {
+        a {
+            font: normal normal bold 1.125rem/1.5625rem Roboto;
+            letter-spacing: 0;
+            color: #151D41;
+            line-height: 1.2;
+        }
+    }
+
+    .views-field-created {
+        font: normal normal normal 0.875rem/2.1875rem Roboto;
+        letter-spacing: 0;
+        color: #048850;
+        line-height: 1;
+    }
+
+    .views-field-field-imagen-de-portada {
+
+    }
+
+    .views-field-body {
+        font: normal normal normal 1.125rem/1.375rem Roboto;
+        letter-spacing: 0.01688rem;
+        color: #2E2E2E;
+        opacity: 0.8;
+        line-height: 1.6;
+    }
+}
+
+
 /* VISTA DE NOTICIAS
 --------------------------------------------------*/
 
@@ -534,6 +629,7 @@ p {
     position: relative;
     height: 100%;
     margin-bottom: 1.5rem;
+    min-height: 450px;
 
     .categoria {
         position: absolute;

@@ -10,6 +10,17 @@
   function init() {
     if (!initialized) {
       initialized = true;
+
+      $(".boton-buscar").click(function(){
+        $(".form-buscar").show();
+      });
+
+      $(document).keyup(function(e) {
+        if (e.which == 27) {
+          $(".form-buscar").hide(); 
+        }
+      });
+      
       var slider = tns({ 
         container: '.view-slider .view-content.row',
         mode: 'carousel',

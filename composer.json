@@ -38,6 +38,7 @@
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
         "drupal/scroll_top_button": "^2.0",
+        "drupal/search_api": "^1.28",
         "drupal/serial": "^1.0@alpha",
         "drupal/simple_gmap": "^3.0",
         "drupal/svg_image": "^1.16",
