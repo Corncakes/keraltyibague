@@ -1,7 +1,7 @@
 /* VARIABLES */
 
 // colors
-$primary: #2E7300;
+$primary: #008767;
 $primary-shade: #002E58;
 $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
@@ -46,3 +46,11 @@ $enable-shadows: false;
 $enable-gradients: false;
 // Breadcrumbs (Works only on Bootstrap 5+)
 // $breadcrumb-divider: quote(">");
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url('../fonts/fontsfree-net-proximanova-regular-webfont.woff2') format('woff2'),
+         url('../fonts/fontsfree-net-proximanova-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
