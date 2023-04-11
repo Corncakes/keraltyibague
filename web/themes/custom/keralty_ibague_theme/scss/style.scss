@@ -770,7 +770,7 @@ p {
         top: 0;
         background-color: #008767;
         padding: 0.3rem 0.8rem;
-        font: normal normal normal 12px/14px Roboto;
+        font: normal normal normal 12px/14px proxima_novaregular;
         letter-spacing: 0.18px;
         color: #FFFFFF;
         text-transform: uppercase;
@@ -800,7 +800,7 @@ p {
     }
 
     .created {
-        font: normal normal normal 14px/35px Roboto;
+        font: normal normal normal 14px/35px proxima_novaregular;
         letter-spacing: 0px;
         color: #048850;
         padding: 1rem 1rem 0.2rem 1rem;
@@ -809,14 +809,14 @@ p {
 
     .title {
         padding: 0.5rem 1rem;
-        font: normal normal bold 18px/25px Roboto;
+        font: normal normal bold 18px/25px proxima_novaregular;
         letter-spacing: 0px;
         color: #151D41;
         line-height: 1.2;
     }
 
     .body {
-        font: normal normal normal 16px/22px Roboto;
+        font: normal normal normal 16px/22px proxima_novaregular;
         letter-spacing: 0px;
         color: #151D41;
         padding: 0.5rem 1rem;
@@ -839,7 +839,7 @@ p {
         }
 
         a {
-            font: normal normal bold 15px/18px Roboto;
+            font: normal normal bold 15px/18px proxima_novaregular;
             color: $white;
 
             &:hover {
@@ -849,29 +849,38 @@ p {
         }
     }
 }
-
-#block-views-block-noticias-block-2 {
+.page-node-5{
+	.news-card{
+		.categoria{
+			background-color:#1E3D7B !important;
+		}
+	}
+}
+.view{
     nav {
         display: flex;
         justify-content: center;
         margin-top: 3rem;
 
-        /*.pagination {
+        .pagination {
             .page-item {
                 .page-link {
-                    border: none;
-                    width: 35px;
-                    height: 35px;
+                    border: none !important;
+                    width: 2em;
+                    height: 2em;
                     text-align: center;
-                    background: #dddddd;
-                    color: #555555;
-                    //border-radius: 30px;
+                    background: #012E58;
+                    color: #fff;
+                    border-radius: 50%;
                     margin: 0 0.3rem;
+					display: flex;
+					align-items: center;
+                    
                 }
 
                 &.active {
                     .page-link {
-                        background: #5A9400 !important;
+                        background: #008767 !important;
                         color: #ffffff !important;
                         text-align: center;
                     }
@@ -879,24 +888,17 @@ p {
             }
 
             .pager__item--next, .page-item:last-child, .pager__item--previous, .page-item:first-child {
-                display: flex;
-                align-items: center;
 
                 .page-link {
                     background: transparent;
-                    color: #555555;
-                    border: none;
-                    font-weight: bold;
-                    padding: 0 0.2rem;
-                    display: flex;
-                    align-items: center;
-                    font-size: 1.2rem;
+                    color: #616161;
                 }
             }
-        }*/
-    }
+        }
+   } 
+}
 
-    #views-exposed-form-noticias-block-2 {
+    #views-exposed-form-noticias-block-2, #views-exposed-form-articulos-de-investigacion-block-1 {
         margin: 3rem 0;
 
         .bef-datepicker {
@@ -926,7 +928,7 @@ p {
             }
         }
     }
-}
+
 
 #block-views-block-noticias-block-3 {
     .view-noticias {
@@ -959,7 +961,7 @@ footer {
 
                     .nav-item {
                         a {
-                            font: normal normal normal 12px/25px Roboto;
+                            font: normal normal normal 12px/25px proxima_novaregular;
                             letter-spacing: 0px;
                             color: #FFFFFF;
                             padding: 0.4rem 0;
@@ -1114,7 +1116,7 @@ footer {
         background: #0071A3;
         padding: 0.5rem 1.5rem;
         line-height: 1;
-        font: normal normal bold 20px/30px Roboto;
+        font: normal normal bold 20px/30px proxima_novaregular;
         letter-spacing: 0.36px;
         color: #FFFFFF;
     }
@@ -1212,13 +1214,13 @@ footer {
 .breadcrumb {
     .breadcrumb-item {
         a {
-            font: normal normal normal 14px/35px Roboto;
+            font: normal normal normal 14px/35px proxima_novaregular;
             letter-spacing: 0px;
             color: #777777;
         }
 
         &.active {
-            font: normal normal normal 14px/35px Roboto;
+            font: normal normal normal 14px/35px proxima_novaregular;
             letter-spacing: 0px;
             color: #777777;
             text-decoration: underline;
@@ -1252,7 +1254,7 @@ footer {
             }
 
             .titulo {
-                font: normal normal bold 22px/24px Roboto;
+                font: normal normal bold 22px/24px proxima_novaregular;
                 letter-spacing: 0px;
                 color: $white;
             }
@@ -1279,7 +1281,7 @@ footer {
                 }
         
                 a {
-                    font: normal normal bold 15px/18px Roboto;
+                    font: normal normal bold 15px/18px proxima_novaregular;
                     color: $white;
         
                     &:hover {
@@ -1316,9 +1318,9 @@ footer {
             background-color: #ffffff;
 
             .views-field-title {
-                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px Roboto;
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
                 text-align: center;
-                font: normal normal bold 16px/25px Roboto;
+                font: normal normal bold 16px/25px proxima_novaregular;
                 letter-spacing: 0px;
                 color: #151D41;
                 margin: 2rem 1.5rem 1rem 1.5rem;
@@ -1348,7 +1350,7 @@ footer {
                 }
         
                 a {
-                    font: normal normal bold 15px/18px Roboto;
+                    font: normal normal bold 15px/18px proxima_novaregular;
                     color: #ffffff;
         
                     &:hover {
@@ -1386,9 +1388,9 @@ footer {
             background: #ffffff;
 
             .views-field-title {
-                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px Roboto;
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
                 text-align: center;
-                font: normal normal bold 16px/25px Roboto;
+                font: normal normal bold 16px/25px proxima_novaregular;
                 letter-spacing: 0px;
                 color: #151D41;
                 margin: 1rem 1.5rem;
@@ -1418,7 +1420,7 @@ footer {
                 }
         
                 a {
-                    font: normal normal bold 15px/18px Roboto;
+                    font: normal normal bold 15px/18px proxima_novaregular;
                     color: #ffffff;
         
                     &:hover {
@@ -1442,13 +1444,13 @@ footer {
 
         .view-header {
             .titulo {
-                font: normal normal bold 28px/45px Hind;
+                font: normal normal bold 28px/45px proxima_novaregular;
                 letter-spacing: 0.42px;
                 color: #1E3D7B;
             }
         }
 
-        .estudios-investigación-card {
+        .estudios-investigacion-card {
             background: #ffffff;
             box-shadow: 0px 3px 6px #7575754D;
             border: 1px solid #D4CACA;
@@ -1457,20 +1459,19 @@ footer {
             height: 100%;
             margin-bottom: 2rem;
             padding: 1rem;
-
-            .fecha {
-                font: normal normal normal 14px/17px Roboto;
-                letter-spacing: 0.21px;
-                color: #446519;
-                line-height: 1.2;
-            }
-
+			text-align:center;
+            
+			.icono{
+				color:#000066;
+				font: normal normal bold 36px/40px proxima_novaregular;
+				padding: 1rem 0;
+			}
             .titulo {
-                text-align: left;
-                font: normal normal bold 18px/22px Roboto;
+       
+                font: normal normal bold 18px/22px proxima_novaregular;
                 letter-spacing: 0.27px;
                 color: #1E3D7B;
-                margin: 1.2rem 0;
+                padding: 1rem 0;
 
                 a {
                     color: #1E3D7B;
@@ -1478,36 +1479,24 @@ footer {
             }
 
             .info {
-                display: flex;
-                justify-content: space-between;
-
-                .imagen {
-                    width: 38%;
-
-                    img {
-                        //border: 6px solid #e8e8e8;
-                    }
-                }
-
-                .text-container {
-                    width: 58%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: flex-end;
-
-                    .cuerpo {
-                        p {
-                            font: normal normal normal 14px/18px Hind;
-                            letter-spacing: 0.21px;
-                            color: #6E7074;
-                        }
-                    }
-                        
+                
+				.idioma{
+				   font: normal normal bold 16px/20px proxima_novaregular;
+				   color:#0F1903;
+				   padding: 1rem 0;
+				
+				}
+                .fecha {
+					font: normal normal normal 14px/17px proxima_novaregular;
+					letter-spacing: 0.21px;
+					color: #446519;
+					padding: 1rem 0;
+				
+				}                        
                     .enlace {
                         display: flex;
                         justify-content: center;
-                        background-color: #008767;
+                        background-color: #0071A3;
                         border-radius: 25px;
                         padding: 0.7rem 2rem;
                         line-height: 1;
@@ -1517,7 +1506,7 @@ footer {
                         font-weight: 500;
                 
                         &:hover {
-                            background: #5A9400;
+                            background-color: #012E58;
                 
                             a {
                                 color: #ffffff;
@@ -1525,7 +1514,7 @@ footer {
                         }
                 
                         a {
-                            font: normal normal bold 15px/18px Roboto;
+                            font: normal normal bold 15px/18px proxima_novaregular;
                             color: #ffffff;
                 
                             &:hover {
@@ -1534,7 +1523,6 @@ footer {
                             }
                         }
                     }
-                }
             }
         }
     }
@@ -1556,7 +1544,7 @@ footer {
     .categoria {
         background-color: #008767;
         padding: 0.3rem 0.8rem;
-        font: normal normal normal 12px/14px Roboto;
+        font: normal normal normal 12px/14px proxima_novaregular;
         letter-spacing: 0.18px;
         color: #FFFFFF;
         text-transform: uppercase;
@@ -1566,7 +1554,7 @@ footer {
     }
 
     .fecha {
-        font: normal normal normal 14px/35px Roboto;
+        font: normal normal normal 14px/35px proxima_novaregular;
         letter-spacing: 0px;
         color: #048850;
         margin: 1rem 0;
@@ -1640,7 +1628,7 @@ footer {
 
         .texto {
             p, li {
-                font: normal normal normal 16px/25px Roboto;
+                font: normal normal normal 16px/25px proxima_novaregular;
                 letter-spacing: 0px;
                 color: #434A67;
                 opacity: 1;
@@ -1717,7 +1705,7 @@ footer {
             background: #0071A3;
             padding: 0.5rem 1.5rem;
             line-height: 1;
-            font: normal normal bold 1.25rem/1.875rem Roboto;
+            font: normal normal bold 1.25rem/1.875rem proxima_novaregular;
             letter-spacing: 0.0225rem;
             color: #FFFFFF;
             margin-bottom: 1rem;
@@ -1739,7 +1727,7 @@ footer {
             background: #0071A3;
             padding: 0.5rem 1.5rem;
             line-height: 1;
-            font: normal normal bold 1.25rem/1.875rem Roboto;
+            font: normal normal bold 1.25rem/1.875rem proxima_novaregular;
             letter-spacing: 0.0225rem;
             color: #FFFFFF;
             margin-bottom: 2rem;
@@ -1773,7 +1761,7 @@ footer {
             background: #0071A3;
             padding: 0.5rem 1.5rem;
             line-height: 1;
-            font: normal normal bold 1.25rem/1.875rem Roboto;
+            font: normal normal bold 1.25rem/1.875rem proxima_novaregular;
             letter-spacing: 0.0225rem;
             color: #FFFFFF;
             margin-bottom: 2rem;
@@ -1826,14 +1814,14 @@ footer {
         margin-top: 1rem;
 
         a {
-            font: normal normal bold 18px/25px Roboto;
+            font: normal normal bold 18px/25px proxima_novaregular;
             letter-spacing: 0px;
             color: #1E3D7B;
         }
     }
 
     .views-field-field-titulo-profesional {
-        font: normal normal normal 16px/21px Roboto;
+        font: normal normal normal 16px/21px proxima_novaregular;
         letter-spacing: 0px;
         color: #000000;
     }
@@ -1876,7 +1864,7 @@ footer {
                 }
 
                 & * {
-                    font: normal normal normal 14px/17px Roboto;
+                    font: normal normal normal 14px/17px proxima_novaregular;
                     letter-spacing: 0.21px;
                     color: #FFFFFF;
                 }
@@ -1927,7 +1915,7 @@ footer {
 .subtitulo-faq {
     p {
         text-align: center;
-        font: normal normal bold 36px/58px Hind;
+        font: normal normal bold 36px/58px proxima_novaregular;
         letter-spacing: 0.54px;
         color: #1E3D7B;
     }
