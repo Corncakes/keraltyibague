@@ -903,6 +903,7 @@ p {
 
         .bef-datepicker {
             &.form-control {
+			    background-color:white !important;
                 &.hasDatepicker {
                     background: url('../images/awesome-calendar-alt.svg') right 10px center no-repeat;
                 }
@@ -1944,3 +1945,41 @@ footer {
         }
     }
 }
+
+/*ARTICULOS DE INVESTIGACION
+-----------------------------------------------*/
+.boton{
+	display: flex;
+    justify-content: center;
+    background-color: #0071A3;
+    border-radius: 25px;
+    padding: 0.7rem 2rem;
+    line-height: 1;
+    margin: 1rem 1rem 1.2rem 1rem;
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+.node--type-articulo-de-investigacion{
+	h2{
+		font-weight:bold !important;
+		line-height:1 !important;
+	}
+    .titulo-alterno{
+		font-size:1.5em;
+		font-weight:bold;
+		line-height:1;
+	}
+    .enlace-head{
+		a{
+			color:#474747;
+			}
+	}
+	.enlace{
+		background-color: #002E58;
+        color: #fff;
+        &:hover {
+				background-color: #2e7300;
+			}
+	}
+} 
