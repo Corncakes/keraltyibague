@@ -126,8 +126,8 @@ p {
 
     a {
         font: normal normal bold 15px/18px proxima_novaregular;
-        color: #FAFAFA;
-        background-color: #002D57;
+        color: #fff;
+        background-color: #008767;
         border-radius: 25px;
         padding: 0.7rem 2rem;
         line-height: 1;    
@@ -755,6 +755,7 @@ p {
     }
 }
 
+
 .news-card {
     box-shadow: 0px 3px 6px #7575754D;
     border-radius: 5px;
@@ -777,7 +778,6 @@ p {
 		z-index:2;
         //opacity: 0.8;
     }
-
     .imagen-de-portada {
 		position: relative;
 		&:hover{
@@ -940,7 +940,13 @@ p {
 
 /* FOOTER
 --------------------------------------------------*/
-
+.page-node-3,.page-node-2{
+	footer {
+		&.site-footer {
+			background-color: rgba(245,245,245,1) !important;
+		}
+	}
+}
 footer {
     &.site-footer {
         background: transparent url(../images/trazado.png) center top no-repeat !important;
@@ -1012,6 +1018,7 @@ footer {
 }
 
 .encabezado-node {
+	 margin: 0 0 1.2rem;	
     .content {
         position: relative;
 
@@ -1048,7 +1055,7 @@ footer {
         }
     }
 
-    &::after {
+    /*&::after {
         content: '';
         width: 100%;
         height: 175px;
@@ -1056,7 +1063,7 @@ footer {
         background-size: cover;
         margin: 0 0 1.2rem;
         display: block;
-    }
+    }*/
 }
 
 /* CUERPO PRINCIPAL
@@ -1114,7 +1121,7 @@ footer {
 .paragraph--type--items-de-texto {
     h2 {
         display: inline-block;
-        background: #0071A3;
+        background: #002E58;
         padding: 0.5rem 1.5rem;
         line-height: 1;
         font: normal normal bold 20px/30px proxima_novaregular;
@@ -1133,7 +1140,7 @@ footer {
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
-                background: #5A9400;
+                background: #008767;
                 margin: 0.5rem 0.6rem 0 0;
                 flex: none;
             }
@@ -1261,33 +1268,24 @@ footer {
             }
         }
 
-        .views-field-view-node {
+        .views-field-field-enlace-servicio {
             display: flex;
             justify-content: center;
             
             .field-content {
-                background-color: $primary;
-                border-radius: 25px;
-                padding: 0.7rem 2rem;
-                line-height: 1;
-                margin: 1rem 1rem 1.2rem 1rem;
-                display: inline-block;
-        
-                &:hover {
-                    background: #002D57;
-        
-                    a {
-                        color: $white;
-                    }
-                }
-        
                 a {
                     font: normal normal bold 15px/18px proxima_novaregular;
                     color: $white;
-        
+					background-color: $primary;
+					border-radius: 25px;
+					padding: 0.7rem 2rem;
+					line-height: 1;
+					margin: 1rem 1rem 1.2rem 1rem;
+					display: inline-block;
                     &:hover {
                         text-decoration: none;
                         color: $white;
+						background: #2e7300;
                     }
                 }
             }
@@ -1317,7 +1315,28 @@ footer {
             height: 100%;
             margin-bottom: 2rem;
             background-color: #ffffff;
-
+			
+			.views-field-field-imagen-de-portada {
+				div{
+					position: relative;
+					&:hover{
+						&:before{
+							background: rgba(0,0,0,0.3);
+						}
+					}
+					&:before{
+						content: "";
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background: rgba(0,0,0, 0);
+						transition: background .3s linear;
+					}
+			}
+		}
             .views-field-title {
                 font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
                 text-align: center;
@@ -1335,19 +1354,18 @@ footer {
             justify-content: center;
             
             .field-content {
-                background-color: #008767;
-                border-radius: 25px;
-                padding: 0.7rem 2rem;
-                line-height: 1;
-                margin: 1rem 1rem 1.2rem 1rem;
-                display: inline-block;
-        
-                &:hover {
-                    background: #002D57;
-        
                     a {
-                        color: #ffffff;
-                    }
+                        background-color: #008767;
+						border-radius: 25px;
+						padding: 0.7rem 2rem;
+						line-height: 1;
+						margin: 1rem 1rem 1.2rem 1rem;
+						display: inline-block;
+						&:hover {
+							background: #2e7300;
+        
+						}
+					}
                 }
         
                 a {
@@ -1362,7 +1380,6 @@ footer {
             }
         }
     }
-}
 
 
 /* VIEWS ESPECIALIDADES
@@ -1485,6 +1502,7 @@ footer {
 				   font: normal normal bold 16px/20px proxima_novaregular;
 				   color:#0F1903;
 				   padding: 1rem 0;
+				   border-bottom: 1px solid #707070;
 				
 				}
                 .fecha {
@@ -1497,7 +1515,7 @@ footer {
                     .enlace {
                         display: flex;
                         justify-content: center;
-                        background-color: #0071A3;
+                        background-color: #2e7300;
                         border-radius: 25px;
                         padding: 0.7rem 2rem;
                         line-height: 1;
@@ -1649,7 +1667,7 @@ footer {
                     background: #008767;
 
                     &:hover {
-                        background: #002F87;
+                        background: #2e7300;
                     }
                 }
             }
@@ -1684,6 +1702,9 @@ footer {
 --------------------------------------------------*/
 
 #block-views-block-especialistas-block-1 {
+	.views-field-title{
+		color:#2e2e2e;
+	}
     .views-field-field-titulo-profesional {
         color: #002F87;
         margin-bottom: 2.5rem;
@@ -1703,7 +1724,7 @@ footer {
     .estudios {
         h4 {
             display: inline-block;
-            background: #0071A3;
+            background: #002E58;
             padding: 0.5rem 1.5rem;
             line-height: 1;
             font: normal normal bold 1.25rem/1.875rem proxima_novaregular;
@@ -1722,7 +1743,7 @@ footer {
         }
     }
 
-    .especialidades {
+   /* .especialidades {
         h4 {
             display: inline-block;
             background: #0071A3;
@@ -1746,7 +1767,7 @@ footer {
                         display: block;
                         width: 10px;
                         height: 10px;
-                        background-color: #5A9400;
+                        background-color: ##008767;
                         border-radius: 50%;
                         flex: none;
                         margin: 0.5rem 0.6rem 0 0;
@@ -1754,12 +1775,12 @@ footer {
                 }
             }
         }
-    }
+    }*/
 
-    .experiencia {
+    .experiencia, .especialidades, .publicaciones {
         h4 {
             display: inline-block;
-            background: #0071A3;
+            background: #002E58;
             padding: 0.5rem 1.5rem;
             line-height: 1;
             font: normal normal bold 1.25rem/1.875rem proxima_novaregular;
@@ -1780,7 +1801,7 @@ footer {
                         display: block;
                         width: 10px;
                         height: 10px;
-                        background-color: #5A9400;
+                        background-color: #008767;
                         border-radius: 50%;
                         flex: none;
                         margin: 0.5rem 0.6rem 0 0;
@@ -1795,7 +1816,7 @@ footer {
 /* VIEWS DETALLE DE SERVICIO
 --------------------------------------------------*/
 
-#block-views-block-especialistas-block-2 {
+#block-views-block-especialistas-block-2, .view-display-id-page_1 {
     margin: 5rem;
 
     .view-header {
@@ -1805,9 +1826,27 @@ footer {
     }
 
     .views-field-field-imagen-de-detalle {
+		position: relative;
+		&:hover{
+			&:before{
+				background: rgba(0,0,0,0.3);
+				}
+			}
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0,0,0, 0);
+			transition: background .3s linear;
+			
+			}
         img {
             //border-radius: 10px;
-            //border: 1px solid #777777;
+            border: 1px solid #707070;
         }
     }
 
@@ -1933,11 +1972,32 @@ footer {
         overflow: hidden;
 
         .accordion-header {
+			border-radius: 25px;
             .accordion-button {
                 background: #fff;
                 border: none;
                 box-shadow: none;
-
+				&::not(.collapsed){
+					&:after{
+						content: "-";
+						font-weight: 900;
+						font-size: 2em;
+						padding: 0;
+						line-height: 0.8;
+						color: #28bc9a !important;
+						background-image: none;
+					}
+				}
+				&:after{
+					margin-left: auto;
+					content: "+";
+					font-weight: 900;
+					font-size: 2em;
+					padding: 0;
+					line-height: 0.8;
+					color: #28bc9a !important;
+					background-image: none;
+    			}
                 &:not(.collapsed) {
                     color: #333;
                 }
@@ -1948,7 +2008,7 @@ footer {
 
 /*ARTICULOS DE INVESTIGACION
 -----------------------------------------------*/
-.boton{
+.boton-pill{
 	display: flex;
     justify-content: center;
     background-color: #0071A3;

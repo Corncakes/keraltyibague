@@ -78,7 +78,7 @@
   <header class="border-bottom">
     {{ title_prefix }}
    
-      <h2{{ title_attributes.addClass('node__title,pb-2 pb-md-3') }}>
+      <h2{{ title_attributes.addClass('node__title,py-2 pb-md-4 pt-md-5') }}>
         {{ content.field_titulo_original}}
       </h2>
       {% if node.field_titulo_alternativo.value %}
@@ -104,7 +104,7 @@
     <div class="w-100 "></div>
     <h4 class="py-2 py-md-4 mt2 mt--md-5">Resumen</h4>
     <div class="resumen pb-3">{{ content.field_abstarct }}</div>
-    <div class="text-center"><a class="boton enlace" href="{{ node.field_enlace.0.url }}" target="_blank">  <i class="icono fa fa-external-link" aria-hidden="true"></i>
+    <div class="text-center"><a class="boton-pill enlace" href="{{ node.field_enlace.0.url }}" target="_blank">  <i class="icono fa fa-external-link" aria-hidden="true"></i>
 Leer artículo completo</a></div>
     
     
