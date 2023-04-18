@@ -2043,3 +2043,83 @@ footer {
 			}
 	}
 } 
+
+/*NORMATIVIDAD
+---------------------------------*/
+
+.normatividad-card {
+            background: #ffffff;
+            box-shadow: 0px 3px 6px #7575754D;
+            border: 1px solid #D4CACA;
+            border-radius: 15px;
+            position: relative;
+            height: 100%;
+            margin-bottom: 2rem;
+            padding: 1rem;
+			text-align:center;
+            
+			.icono{
+				color:#000066;
+				font: normal normal bold 36px/40px proxima_novaregular;
+				padding: 1rem 0;
+			}
+            .titulo {
+       
+                font: normal normal bold 18px/22px proxima_novaregular;
+                letter-spacing: 0.27px;
+                color: #1E3D7B;
+                padding: 1rem 0;
+
+                a {
+                    color: #1E3D7B;
+                }
+            }
+
+            .info {
+                
+				.idioma{
+				   font: normal normal bold 16px/20px proxima_novaregular;
+				   color:#0F1903;
+				   padding: 1rem 0;
+				   border-bottom: 1px solid #707070;
+				
+				}
+                .fecha {
+					font: normal normal normal 14px/17px proxima_novaregular;
+					letter-spacing: 0.21px;
+					color: #446519;
+					padding: 1rem 0;
+				
+				}                        
+                    .enlace {
+                        display: flex;
+                        justify-content: center;
+                        background-color: #008767;
+                        border-radius: 25px;
+                        padding: 0.7rem 2rem;
+                        line-height: 1;
+                        margin: 1rem 1rem 1.2rem 1rem;
+                        display: inline-block;
+                        color: #fff;
+                        font-weight: 500;
+                
+                        &:hover {
+                            background-color: #2e7300;
+                
+                            a {
+                                color: #ffffff;
+                            }
+                        }
+                
+                        a {
+                            font: normal normal bold 15px/18px proxima_novaregular;
+                            color: #ffffff;
+                
+                            &:hover {
+                                text-decoration: none;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+            }
+        }
