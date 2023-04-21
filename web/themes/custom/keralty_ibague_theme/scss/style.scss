@@ -396,11 +396,13 @@ p {
 
     .video {
         position: relative;
-        height: 100%;
+        height: 100% !important;
         padding-top: 1.5rem;
         padding-bottom: 3rem;
         margin-top: 1.5rem;
-
+		video{
+			width:100% !important;
+		}
         &::before {
             content: '';
             width: 102px;
@@ -451,7 +453,7 @@ p {
                 &:nth-child(odd) {
                     .paragraph--type--pagina-con-icono {
                         background: transparent url(../images/azul_bg.png) 0 0 no-repeat;
-
+						height:100%;
                         .inline__links {
                             .node-readmore {
                                 background-color: #8BC63F;
@@ -500,7 +502,8 @@ p {
     background-size: cover;
     position: relative;
     padding: 1.9rem;
-
+	height:100%;
+	
     .field--name-field-icono {
         position: absolute;
         top: -11px;
@@ -572,12 +575,13 @@ p {
         iframe {
             /*border: 8px solid #dddddd !important;
             border-radius: 35px;*/
+			width:100%;
         }
     }
 
     .inline-map {
         display: inline-block;
-
+		width:100%;
         .como-llegar {
 
             .boton {
@@ -764,7 +768,8 @@ p {
     margin-bottom: 1.5rem;
     min-height: 430px;
     background: #ffffff;
-
+	display:flex;
+	flex-direction:column;
     .categoria {
         position: absolute;
         left: 0;
@@ -820,6 +825,7 @@ p {
         letter-spacing: 0px;
         color: #151D41;
         padding: 0.5rem 1rem;
+		height:100%;
     }
 
     .enlace {
@@ -827,9 +833,9 @@ p {
         border-radius: 25px;
         padding: 0.7rem 2rem;
         line-height: 1;
-        margin: 1rem 1rem 0.5rem 1rem;
-        display: inline-block;
-
+        margin: 1rem;
+        /*display: inline-block;*/
+		align-self:center;
         &:hover {
             background: #5A9400;
 
@@ -2047,7 +2053,7 @@ footer {
 /*NORMATIVIDAD Y SEDES
 ---------------------------------*/
 
-.normatividad-card, .sedes-card {
+.normatividad-card {
             background: #ffffff;
             box-shadow: 0px 3px 6px #7575754D;
             border: 1px solid #D4CACA;
@@ -2109,13 +2115,52 @@ footer {
                         }
                     }
             }
-        }
+			}
 		
 .sedes-card {
+     @extend .normatividad-card;
 	.info{
 		.direccion{
 			font-size:0.8em;
 			color:#1E3D7B;
+		}
+	}
+	.field--name-field-media-image {
+		img{
+			width:100%;
+			text-align:center;
+		}
+	}
+}
+
+#sede{
+	.imagen{
+		border-radius:25px;
+		overflow:hidden;
+		
+	}
+	.mapa{
+		@extend .imagen;
+		margin:2em 0 1em 0;
+		border:10px solid #dbdbdb;
+	}
+	.info{
+		box-shadow: 0px 3px 6px #7575754D;
+		border-radius: 22px;
+		padding: 1.5rem;
+		background-color: $white;
+		margin:0.5em 0;
+		
+		.icono{
+			color:#008767;
+			font-size:1.4em;
+			padding-right:1em;
+		}
+		
+		.label{
+			color: #1E3D7B;
+			padding-right:1em;
+			font-weight:bold
 		}
 	}
 }
