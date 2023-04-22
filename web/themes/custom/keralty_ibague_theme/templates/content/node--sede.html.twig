@@ -107,16 +107,19 @@
 			</div>
 		</div>
 		{% endif %}
-		<div class="col-12 col-md-6">
-			<div class="col-12 col-md-6">
-				<h2>{{ label }}</h2>
+		<div class="col-12 col-md-6 d-flex flex-column justify-content-between p-0 ps-md-4">
+			<div class="row">
+				<div class="col-12 p-0">
+					<h2>{{ label }}</h2>
+				</div>
 			</div>
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 p-0">
 				    <div class="info">
 						<i class="icono fa-solid fa-location-crosshairs"></i>
 						<span clasS="label">Dirección:</span> {{ node.field_direccion.value }}
 					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-12 col-md-6 p-0 pe-md-3">
@@ -134,15 +137,16 @@
 			</div>
 		</div>
 	</div>
-	</div>
 	<div class="row">
 		<div class="col-12">
 {% set width='100%' %}
 {% set height='400px' %}
-			<div class="mapa">
+			<div class="mapa mt-5">
 				<iframe width="{{ width }}" height="{{ height }}" title="{{ node.field_mapa.value }}" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m4!2m1!1s{{ node.field_mapa.value }}!5e0!6i14!5m1!1ses"></iframe>
 			</div>
 		</div>
 	</div>
-  
+<div class="reversed-triangle my-5"></div>
+<div class="text-center"><a class="boton-pill mb-5" href="/sedes">Consultar todas las sedes</a>  
 </article>
+
