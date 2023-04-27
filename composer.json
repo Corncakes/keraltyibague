@@ -44,6 +44,7 @@
         "drupal/svg_image": "^1.16",
         "drupal/textarea_limit": "^3.0",
         "drupal/token": "^1.11",
+        "drupal/twig_tweak": "3.2",
         "drush/drush": "^11.4"
     },
     "conflict": {

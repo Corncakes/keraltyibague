@@ -2121,7 +2121,7 @@ footer {
                         }
                     }
             }
-			}
+		}
 		
 .sedes-card {
      @extend .normatividad-card;
@@ -2143,7 +2143,9 @@ footer {
 	.imagen{
 		border-radius:25px;
 		overflow:hidden;
-		
+		img{
+			max-width:none;
+		}
 	}
 	
 	.mapa{
