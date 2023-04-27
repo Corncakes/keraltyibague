@@ -102,8 +102,8 @@
   
 
 		<div class="col-12 col-md-6">
-			<div class="imagen mb-2 mb-md-0 h-100">
-				<img class="h-100 mw-auto" src="{{ node.field_imagen_de_detalle.entity.field_media_image.entity.fileuri|image_style('sede_detalle')  }}" alt="{{ node.field_imagen_de_detalle.alt.value }}" />
+			<div class="imagen mb-2 mb-md-0">
+				<img class="img-fluid w-100" src="{{ node.field_imagen_de_detalle.entity.field_media_image.entity.fileuri)|image_style('sede_detalle')  }}" alt="{{ node.field_imagen_de_detalle.alt.value }}" />
 			</div>
 		</div>
 		{% endif %}
