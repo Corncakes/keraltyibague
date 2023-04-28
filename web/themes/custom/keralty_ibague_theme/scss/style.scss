@@ -15,7 +15,9 @@ font-family: 'proxima_novaregular';
 
 /* GENERAL STYLES
 -------------------------------------------------*/
-
+.path-node{
+	font-family: 'proxima_novaregular' !important;
+}
 body {
     background: $white;
 }
@@ -2122,7 +2124,17 @@ footer {
                     }
             }
 		}
-		
+#block-views-block-sedes-block-1 .view-content.row > h3{
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	&:after{
+		@extend .reversed-triangle;
+		content:" ";
+		display:block;
+		margin:1em 0;
+	}
+}		
 .sedes-card {
      @extend .normatividad-card;
 	.info{
