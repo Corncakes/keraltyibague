@@ -48,7 +48,8 @@ a {
 }
 
 .site-footer {
-    background: $accent-shade !important;
+    /*background: $accent-shade !important;*/
+	background-color:#002e58 !important;
 }
 
 .menu--main li a {
@@ -959,10 +960,10 @@ p {
 }
 footer {
     &.site-footer {
-        background: transparent url(../images/trazado.png) center top no-repeat !important;
+        /*background: transparent url(../images/trazado.png) center top no-repeat !important;*/
         background-size: cover !important;
         padding-top: 8rem;
-
+		
         .block-menu {
             h2 {
                 font: normal normal bold 13px/24px proxima_novaregular !important;
@@ -2124,19 +2125,68 @@ footer {
                     }
             }
 		}
-#block-views-block-sedes-block-1 .view-content.row > h3{
-	display:block;
-	text-align:center;
-	font-weight:bold;
-	&:after{
-		@extend .reversed-triangle;
-		content:" ";
+		
+		
+#block-views-block-sedes-block-1 {
+	.view-content { 
+	    @extend .g-0;
+		div{
+			&:nth-child(4n){
+				background-color:#f5f5f5;
+				&:before{
+						left: 0rem;
+						z-index: 0;
+					}
+				}
+			}
+		
+		h3{
+			
+			&:nth-child(4n-1){
+				&:after{
+					background-color:#f5f5f5;
+					}
+				}
+		margin:0 !important;
+		padding:0 !important;
 		display:block;
-		margin:1em 0;
+		text-align:center;
+		font-weight:bold;
+		&:after{
+			@extend .reversed-triangle;
+			content:" ";
+			display:block;
+			margin:1em 0 0 0;
+			}
+		}
+		.horizontal{
+			
+			@extend .px-1;
+			@extend .px-md-3;
+			@extend .px-lg-5;
+			position:relative;
+			padding:1em 0;
+			&:before{
+				content: '';
+				width: 139px;
+				height: 139px;
+				background: url('../images/dotted-square.svg');
+				background-size: cover;
+				transform: matrix(-1, 0, 0, -1, 0, 0);
+				display: block;
+				position: absolute;
+				bottom: 1rem;
+				right: 0rem;
+				z-index: -1;
+			}
+		}
 	}
-}		
+}
+
 .sedes-card {
-     @extend .normatividad-card;
+    @extend .normatividad-card; 
+	@extend .mx-1;
+	@extend .mx-md-3;
 	.info{
 		.direccion{
 			font-size:0.8em;
