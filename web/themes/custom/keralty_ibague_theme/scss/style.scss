@@ -166,7 +166,9 @@ p {
 #navbar-main {
     padding-top: 0;
     background-color: #F1F1F1 !important;
-
+	@include mobile {
+		background-color: #fff !important;
+	}
     .navbar-brand {
         max-width: 240px;
     }
@@ -189,10 +191,14 @@ p {
             display: flex;
             justify-content: center;
             align-items: center;
-
+			@include mobile{
+				justify-content:left !important;
+				border-bottom:solid 1px #002D57;
+			}
             &:first-child {
                 a {
                     width: 7rem;
+					
                 }
             }
 
@@ -215,7 +221,12 @@ p {
                     height: 2rem;
                     width: 100%;
                 }*/
-
+				@include mobile{
+					width:100% !important;
+					text-align: left;
+					justify-content:left;
+					padding:1em;
+				}
                 &.short {
                     width: 6.5rem;
 					
@@ -231,6 +242,9 @@ p {
 
                 &:hover, &.is-active {
                     border-radius: 0px 0px 5px 5px;
+					@include mobile{
+						border-radius:0px;
+					}
                     background-color: #002D57;
                     color: #ffffff;
                 }
@@ -243,6 +257,9 @@ p {
                 height: 40px;
                 background: #dddddd;
                 margin-top: 1rem;
+				@include mobile{
+					display:none;
+				}
             }
 
             &:last-child {
@@ -2202,6 +2219,11 @@ footer {
 }
 
 #sede{
+	.titulo{
+		.field--name-field-ciudad{
+			display:contents;
+		}
+	}
 	.imagen{
 		border-radius:25px;
 		overflow:hidden;
