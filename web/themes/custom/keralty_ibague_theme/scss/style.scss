@@ -790,6 +790,7 @@ p {
     background: #ffffff;
 	display:flex;
 	flex-direction:column;
+	justify-content:space-between;
     .categoria {
         position: absolute;
         left: 0;
@@ -968,18 +969,12 @@ p {
 
 /* FOOTER
 --------------------------------------------------*/
-.page-node-3,.page-node-2{
-	footer {
-		&.site-footer {
-			background-color: rgba(245,245,245,1) !important;
-		}
-	}
-}
+
 footer {
     &.site-footer {
         /*background: transparent url(../images/trazado.png) center top no-repeat !important;*/
         background-size: cover !important;
-        padding-top: 8rem;
+        padding-top: 1rem;
 		
         .block-menu {
             h2 {
@@ -1367,13 +1362,16 @@ footer {
 		}
             .views-field-title {
                 font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
-                text-align: center;
+                justify-content: center;
+				text-align:center;
                 font: normal normal bold 16px/25px proxima_novaregular;
                 letter-spacing: 0px;
                 color: #151D41;
-                margin: 2rem 1.5rem 1rem 1.5rem;
+                margin: 1.5rem;
+				align-items:center;
+				display:flex;
                 line-height: 1.2;
-                min-height: 3rem;
+                height: 3rem;
             }
         }
 
@@ -1387,7 +1385,7 @@ footer {
 						border-radius: 25px;
 						padding: 0.7rem 2rem;
 						line-height: 1;
-						margin: 1rem 1rem 1.2rem 1rem;
+						margin: 0rem 1rem 1.2rem 1rem;
 						display: inline-block;
 						&:hover {
 							background: #2e7300;
@@ -1435,13 +1433,16 @@ footer {
 
             .views-field-title {
                 font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
-                text-align: center;
+                justify-content: center;
+				text-align:center;
                 font: normal normal bold 16px/25px proxima_novaregular;
                 letter-spacing: 0px;
                 color: #151D41;
                 margin: 1rem 1.5rem;
                 line-height: 1.2;
-                min-height: 3rem;
+                height: 3rem;
+				display:flex;
+				align-items:center;
             }
         }
 
@@ -1454,7 +1455,7 @@ footer {
                 border-radius: 25px;
                 padding: 0.7rem 2rem;
                 line-height: 1;
-                margin: 1rem 1rem 1.2rem 1rem;
+                margin: 0rem 1rem 1.2rem 1rem;
                 display: inline-block;
         
                 &:hover {
@@ -1996,7 +1997,7 @@ footer {
     .accordion-item {
         margin-bottom: 1rem;
         border: none;
-        border-radius: 20px;
+        border-radius: 25px !important;
         overflow: hidden;
 
         .accordion-header {
@@ -2005,17 +2006,7 @@ footer {
                 background: #fff;
                 border: none;
                 box-shadow: none;
-				&::not(.collapsed){
-					&:after{
-						content: "-";
-						font-weight: 900;
-						font-size: 2em;
-						padding: 0;
-						line-height: 0.8;
-						color: #28bc9a !important;
-						background-image: none;
-					}
-				}
+				
 				&:after{
 					margin-left: auto;
 					content: "+";
@@ -2028,6 +2019,18 @@ footer {
     			}
                 &:not(.collapsed) {
                     color: #333;
+					font-weight:800;
+					&:after{
+						content: "-";
+						font-weight: 900;
+						font-size: 2.2em;
+						padding: 0;
+						line-height: 0.8;
+						color: #28bc9a !important;
+						background-image: none;
+						left: -6px;
+						position: relative;
+					}
                 }
             }
         }
@@ -2258,4 +2261,42 @@ footer {
 			
 		}
 	}
+}
+
+
+/*404*/
+
+.info404{
+  top: 0%;
+    padding-left: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: center;
+
+  
+  h2{
+	color:#048850;
+	font-size:6em !important;
+	font-weight:100 !important;
+	padding:0;
+	margin:0;
+	line-height:0.7 !important;
+	font-family:'roboto' !important;
+  }
+  .body{
+	font-family:'roboto' !important;
+    color:#183878 !important;
+	strong{
+		font-size:2em;
+	}
+  }
+  p{
+	color:#183878 !important;
+	margin:0 !important;
+	padding:0;
+	line-height:1.4;
+	font-size:1.5em !important;
+  }
 }
