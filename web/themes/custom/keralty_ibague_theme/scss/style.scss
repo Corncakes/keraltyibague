@@ -133,8 +133,13 @@ p {
         background-color: #008767;
         border-radius: 25px;
         padding: 0.7rem 2rem;
-        line-height: 1;    
+        line-height: 1; 
+		:hover{
+			color:#fff !important;
+		}
     }
+	
+	
 }
 
 #scrollTopButton-image {
@@ -2267,7 +2272,7 @@ footer {
 /*404*/
 
 .info404{
-  top: 0%;
+  top: 25%;
     padding-left: 3em;
     display: flex;
     flex-direction: column;
