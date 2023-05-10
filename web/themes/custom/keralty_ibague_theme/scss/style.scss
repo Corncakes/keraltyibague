@@ -105,7 +105,7 @@ p {
 }
 
 .triangle {
-    height: 70px;
+    height: 45px;
     width: 100%;
     background: transparent url(../images/triangle.png) center top no-repeat;
     background-size: 180px;
@@ -285,17 +285,22 @@ p {
 
 /* MAIN SLIDER
 --------------------------------------------------*/
-
 .main-slider {
     position: relative;
-
+	
     .tns-slider {
         .tns-item {
             position: relative;
-
+			
             img {
                 width: 100%;
                 height: auto;
+				@include mobile{
+					height:100% !important;
+					width:auto !important;
+					max-width:none;
+					
+				}
             }
 
             .info-container {
@@ -305,7 +310,7 @@ p {
                 width: 100%;
                 height: 100%;
                 background-image: linear-gradient(to right, rgba(0,46,88,1), rgba(0,0,0,0));
-
+				
                 .info {
                     display: flex;
                     align-items: center;
@@ -327,12 +332,20 @@ p {
                         letter-spacing: 0.63px;
                         color: #FAFAFA;
                         margin-bottom: 1.2rem;
+						@include mobile{
+							font-size:2em;
+							line-height:1.2;
+						}
                     }
 
                     .subtitulo, .subtitulo * {
                         font: normal normal normal 32px/38px proxima_novaregular;
                         letter-spacing: 0.48px;
                         color: #FAFAFA;
+						@include mobile{
+							font-size:0.8em;
+							line-height:1.2;
+						}
                     }
 
                     .enlace {
@@ -365,7 +378,9 @@ p {
         padding: 0.5rem;
         border-radius: 25px;
         line-height: 1;
-
+		@include mobile{
+			left: 30%;
+		}
         button {
             width: 20px;
             height: 20px;
@@ -439,6 +454,9 @@ p {
             position: absolute;
             top: 0;
             right: -2rem;
+			@include mobile{
+				right: 0rem;
+			}
             z-index: -1;
         }
 
@@ -2272,7 +2290,7 @@ footer {
 /*404*/
 
 .info404{
-  top: 25%;
+    top: 0%;
     padding-left: 3em;
     display: flex;
     flex-direction: column;
