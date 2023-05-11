@@ -989,7 +989,7 @@ p {
         & > div {
             justify-content: center;
             align-items: flex-end;
-			@extend .row
+			@extend .row;
             .js-form-item, .form-actions {
                 width: auto;
 				
