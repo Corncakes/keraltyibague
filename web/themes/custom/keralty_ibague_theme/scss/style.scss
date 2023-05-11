@@ -986,12 +986,13 @@ p {
                 }
             }
         }
-        & > .row {
+        & > div {
             justify-content: center;
             align-items: flex-end;
-
+			@extend .row
             .js-form-item, .form-actions {
                 width: auto;
+				
             }
 
             .form-actions {
