@@ -2468,8 +2468,8 @@ footer {
 /*temp*/
 
 .dialog-off-canvas-main-canvas{
-	padding-top: 4em;
+	padding-top: 9em;
     @include mobile{
-		top:0em;
+		padding-top: 6em;
 	}
 }
