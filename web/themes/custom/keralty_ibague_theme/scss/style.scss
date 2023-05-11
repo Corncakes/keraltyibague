@@ -2473,3 +2473,15 @@ footer {
 		padding-top: 6em;
 	}
 }
+
+.user-logged-in{
+	.affix {
+		z-index: 501;
+	}
+	.dialog-off-canvas-main-canvas{
+		padding-top: 4em;
+		@include mobile{
+			padding-top: 1em;
+		}
+	}
+}
