@@ -811,8 +811,38 @@ p {
         line-height: 1.6;
     }
 }
-
-
+.page-view-busqueda{
+	#block-keralty-ibague-theme-content {
+		background-color:#F5F5F5;
+		.busqueda-card{
+				background-color:#fff;
+				-webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.79);
+				-moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.79);
+				box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.79);
+				padding:1em;
+				margin:1em 0;
+			}
+			.linea{
+				padding-top:1em;
+				margin-bottom:2em;
+				border-bottom:#999 1px solid;
+			}
+			.boton {
+                background-color: #008767;
+				border-radius: 25px;
+				padding: 0.7rem 2rem;
+				line-height: 1;
+				margin: 0rem 1rem 1.2rem 1rem;
+				display: inline-block;
+				color:white;
+				float:right;
+				&:hover {
+					background: #2e7300;
+					color:white;
+				}
+			}
+		}
+	}
 /* VISTA DE NOTICIAS
 --------------------------------------------------*/
 
@@ -1978,8 +2008,7 @@ footer {
 /* VIEWS DETALLE DE SERVICIO
 --------------------------------------------------*/
 
-#block-views-block-especialistas-block-2{
-	.view-display-id-page_1 {
+	.view-especialistas {
 		margin: 5rem;
 
 		.view-header {
@@ -2030,7 +2059,7 @@ footer {
 			color: #000000;
 		}
 	}
-}
+
 
 /* BOTTOM FOOTER
 --------------------------------------------------*/
@@ -2435,3 +2464,4 @@ footer {
 	font-size:1.5em !important;
   }
 }
+
