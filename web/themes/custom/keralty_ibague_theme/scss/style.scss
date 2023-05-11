@@ -2075,6 +2075,7 @@ footer {
 
         & * {
             margin: 0;
+			display:inline-flex;
         }
 
         .region-left-bottom-footer {
@@ -2464,3 +2465,11 @@ footer {
   }
 }
 
+/*temp*/
+
+.dialog-off-canvas-main-canvas{
+	padding-top: 4em;
+    @include mobile{
+		top:0em;
+	}
+}
