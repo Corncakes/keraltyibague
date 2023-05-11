@@ -122,6 +122,9 @@ p {
 
 .more-link {
     margin: 2rem;
+	@include mobile{
+		margin: 2rem 0;
+	}
 }
 
 .more-link, .boton {
@@ -455,7 +458,7 @@ p {
             top: 0;
             right: -2rem;
 			@include mobile{
-				right: 0rem;
+				display:none;
 			}
             z-index: -1;
         }
@@ -471,6 +474,9 @@ p {
             bottom: 0;
             left: -1rem;
             z-index: -1;
+			@include mobile{
+				display:none;
+			}
         }
     }
 }
@@ -565,6 +571,9 @@ p {
                 .node__title {
                     line-height: 0.8 !important;
                     width: 220px;
+					@include mobile{
+						width:100%;
+					}
 
                     a {
                         font: normal normal bold 22px/26px proxima_novaregular;
@@ -581,6 +590,16 @@ p {
                     color: #FFFFFF;
                     margin-bottom: 1.5rem;
                 }
+				
+				.node__content{
+					.inline__links {
+						nav{
+							@include mobile{
+								justify-content:center;
+							}
+						}
+					}
+				}
             }
 
             .field--name-field-imagen-de-portada {
@@ -612,6 +631,9 @@ p {
         bottom: 0;
         left: -2rem;
         z-index: -1;
+		@include mobile{
+			display:none;
+		}
     }
 
     .mapa {
@@ -629,8 +651,10 @@ p {
 
             .boton {
                 text-align: right;
-                margin-top: 1rem;
-
+                margin: 2rem 0;
+				@include mobile{
+					text-align:center;
+				}
                 a {
                     background-color: $primary;
                     color: $white;
@@ -655,6 +679,9 @@ p {
             top: -3rem;
             right: -2rem;
             z-index: -1;
+			@include mobile{
+				display:none;
+			}
         }
     }
 }
@@ -1000,19 +1027,40 @@ footer {
         padding-top: 1rem;
 		
         .block-menu {
+			@include mobile{
+				&.active{
+					ul{
+						height:100%;
+					}
+				}
+			}
             h2 {
                 font: normal normal bold 13px/24px proxima_novaregular !important;
                 letter-spacing: 0.2px;
                 color: #FFFFFF;
                 text-transform: uppercase;
                 margin-bottom: 0.8rem;
+				@include mobile{
+					&:after{
+						content: "▼";
+						display: inline-block;
+						padding: 0 10px;
+					}
+				}
             }
 
             ul {
+				@include mobile{
+					height:0px;
+					overflow:hidden;
+					transition:height 0.5s ease-out;
+					display:block;
+				}
                 &.nav {
                     flex-direction: column;
 
                     .nav-item {
+						display:block;
                         a {
                             font: normal normal normal 12px/25px proxima_novaregular;
                             letter-spacing: 0px;
@@ -1033,10 +1081,18 @@ footer {
 
 .view-encabezado {
     position: relative;
-
+	@include mobile{
+		height:180px;
+		overflow:hidden;
+	}
     .views-field-field-imagen-de-detalle {
         img {
             width: 100%;
+			@include mobile{
+				width:auto;
+				height:180px;
+				max-width:none;
+			}
         }
     }
 
@@ -1058,6 +1114,11 @@ footer {
                 letter-spacing: 0.63px;
                 color: #FAFAFA;
                 margin-bottom: 1.2rem;
+				@include mobile{
+					width: 50%;
+					padding: 0 0 0 1em;
+					margin:0;
+				}
             }
         }
     }
@@ -1065,6 +1126,10 @@ footer {
 
 .encabezado-node {
 	 margin: 0 0 1.2rem;	
+	 @include mobile{
+		height:180px;
+		overflow:hidden;
+	}
     .content {
         position: relative;
 
@@ -1075,6 +1140,11 @@ footer {
         .field--name-field-imagen {
             img {
                 width: 100%;
+				@include mobile{
+					width:auto;
+					height:180px;
+					max-width:none;
+				}
             }
         }
 
@@ -1096,6 +1166,11 @@ footer {
                     letter-spacing: 0.63px;
                     color: #FAFAFA;
                     margin-bottom: 1.2rem;
+					@include mobile{
+						width: 50%;
+						padding: 0 0 0 1em;
+						margin:0;
+					}
                 }
             }
         }
@@ -1128,6 +1203,9 @@ footer {
 
     img {
         //border-radius: 35px;
+		@include mobile{
+			margin-bottom:2em;
+		}
     }
 
     &::before {
@@ -1142,6 +1220,9 @@ footer {
         top: -1.5rem;
         left: -1rem;
         z-index: -1;
+		@include mobile{
+			display:none;
+		}
     }
 
     &::after {
@@ -1156,6 +1237,9 @@ footer {
         top: -1.5rem;
         right: -1rem;
         z-index: -1;
+		@include mobile{
+			display:none;
+		}
     }
 
 }
@@ -1213,6 +1297,9 @@ footer {
             top: -1.5rem;
             left: -1rem;
             z-index: -1;
+			@include mobile{
+				display:none;
+			}
         }
 
         img {
@@ -1381,6 +1468,9 @@ footer {
 						background: rgba(0,0,0, 0);
 						transition: background .3s linear;
 					}
+					img{
+						width:100%;
+					}
 			}
 		}
             .views-field-title {
@@ -1395,6 +1485,10 @@ footer {
 				display:flex;
                 line-height: 1.2;
                 height: 3rem;
+				font-size:1.1em;
+				@include mobile{
+					font-size:1.6em;
+				}
             }
         }
 
@@ -1453,7 +1547,11 @@ footer {
             height: 100%;
             margin-bottom: 2rem;
             background: #ffffff;
-
+			.imagen {
+				img{
+					width:100%;
+				}
+			}
             .views-field-title {
                 font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
                 justify-content: center;
@@ -1466,6 +1564,9 @@ footer {
                 height: 3rem;
 				display:flex;
 				align-items:center;
+				@include mobile{
+					font-size:1.6em;
+				}
             }
         }
 
@@ -1710,10 +1811,15 @@ footer {
             display: flex;
             justify-content: center;
             margin-top: 4rem;
-
+			@include mobile{
+				margin:2em 0;
+				flex-flow:column;
+			}
             .boton {
                 margin: 0 0.8rem;
-
+				@include mobile{
+					margin:1.5em auto;
+				}
                 a {
                     color: #ffffff;
                     background: #008767;
@@ -1741,6 +1847,9 @@ footer {
             top: -1.5rem;
             right: -1rem;
             z-index: -1;
+			@include mobile{
+				display:none;
+			}
         }
 
         img {
@@ -1868,57 +1977,59 @@ footer {
 /* VIEWS DETALLE DE SERVICIO
 --------------------------------------------------*/
 
-#block-views-block-especialistas-block-2, .view-display-id-page_1 {
-    margin: 5rem;
+#block-views-block-especialistas-block-2{
+	.view-display-id-page_1 {
+		margin: 5rem;
 
-    .view-header {
-        .titulo {
-            color: #1E3D7B;
-        }
-    }
+		.view-header {
+			.titulo {
+				color: #1E3D7B;
+				font-size:1.4em;
+			}
+		}
 
-    .views-field-field-imagen-de-detalle {
-		position: relative;
-		&:hover{
-			&:before{
-				background: rgba(0,0,0,0.3);
+		.views-field-field-imagen-de-detalle {
+			position: relative;
+			&:hover{
+				&:before{
+					background: rgba(0,0,0,0.3);
+					}
 				}
-			}
-		&:before{
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background: rgba(0,0,0, 0);
-			transition: background .3s linear;
+			&:before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0,0,0, 0);
+				transition: background .3s linear;
 			
+				}
+			img {	
+				//border-radius: 10px;
+				border: 1px solid #707070;
 			}
-        img {
-            //border-radius: 10px;
-            border: 1px solid #707070;
-        }
-    }
+		}
+	
+		.views-field-title {
+			margin-top: 1rem;
 
-    .views-field-title {
-        margin-top: 1rem;
+			a {
+				font: normal normal bold 18px/25px proxima_novaregular;
+				letter-spacing: 0px;
+				color: #1E3D7B;
+			}
+		}
 
-        a {
-            font: normal normal bold 18px/25px proxima_novaregular;
-            letter-spacing: 0px;
-            color: #1E3D7B;
-        }
-    }
-
-    .views-field-field-titulo-profesional {
-        font: normal normal normal 16px/21px proxima_novaregular;
-        letter-spacing: 0px;
-        color: #000000;
-    }
+		.views-field-field-titulo-profesional {
+			font: normal normal normal 16px/21px proxima_novaregular;
+			letter-spacing: 0px;
+			color: #000000;
+		}
+	}
 }
-
 
 /* BOTTOM FOOTER
 --------------------------------------------------*/

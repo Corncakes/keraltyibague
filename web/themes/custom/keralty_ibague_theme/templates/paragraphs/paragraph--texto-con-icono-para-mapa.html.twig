@@ -42,6 +42,12 @@
   set classes = [
     'paragraph',
     'mb-4',
+	'd-flex',
+	'd-md-block',
+	'flex-column',
+	'align-items-center',
+	'mx-4',
+	'mx-md-0',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
@@ -50,7 +56,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-        <div class="titulo-container">
+        <div class="titulo-container text-center text-md-start">
             {% if content.field_icono|render is not empty %}
                 <div class="icono">{{ content.field_icono.0 }}</div>
             {% endif %}

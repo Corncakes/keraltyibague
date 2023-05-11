@@ -69,7 +69,7 @@
 #}
 <div id="page-wrapper">
   <div id="page">
-    <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
+    <header id="header" class="header affix nav-wrap" data-toggle="affix" role="banner" aria-label="{{ 'Site header'|t}}">
       {% block head %}
         {% if page.secondary_menu or page.top_header or page.top_header_form %}
           <nav{{ navbar_top_attributes }}>
@@ -178,7 +178,7 @@
     {% endif %}
     <footer class="site-footer">
       {% block footer %}
-        <div class="{{ container }} mt-5">
+        <div class="{{ container }} mt-2 mt-md-4">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
             <div class="site-footer__top clearfix container">
               <div class="row">
