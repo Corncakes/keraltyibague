@@ -201,7 +201,7 @@ p {
             align-items: center;
 			@include mobile{
 				justify-content:left !important;
-				border-bottom:solid 1px #002D57;
+				border-bottom:solid 1px #002F87;
 			}
             &:first-child {
                 a {
@@ -216,7 +216,7 @@ p {
                 height: 100%;            
                 font: normal normal normal 16px/19px proxima_novaregular;
                 letter-spacing: 0.21px;
-                color: #002D57;
+                color: #002F87;
                 text-align: center;
                 padding: 1rem 1.75rem 0.5rem 1.75rem;
                 display: flex;
@@ -253,7 +253,7 @@ p {
 					@include mobile{
 						border-radius:0px;
 					}
-                    background-color: #002D57;
+                    background-color: #002E58;
                     color: #ffffff;
                 }
             }
@@ -432,7 +432,7 @@ p {
         .titulo {
             font: normal normal bold 24px/37px proxima_novaregular;
             letter-spacing: 0.36px;
-            color: #002D57;
+            color: #002F87;
             line-height: 1.2;
         }
     }
@@ -528,7 +528,7 @@ p {
 									padding: 0.7rem 2rem;
 									line-height: 1;
                                     font: normal normal bold 15px/18px proxima_novaregular;
-                                    color: #002D57;
+                                    color: #002F87;
 									&:hover{
 										background-color: #8BC63F;
 									}
@@ -552,9 +552,9 @@ p {
 									padding: 0.7rem 2rem;
 									line-height: 1;
                                     font: normal normal bold 15px/18px proxima_novaregular;
-                                    color: #002D57;
+                                    color: #002F87;
 									&:hover{
-										background-color:#002D57;
+										background-color:#002F87;
 										color:#fff;
 									}
                                 }
@@ -682,7 +682,11 @@ p {
                 a {
                     background-color: $primary;
                     color: $white;
-                }
+					&:hover {
+						background: #2e7300;
+						color:white;
+					}
+				}
             }
         }
     }
@@ -728,7 +732,7 @@ p {
         .titulo {
             font: normal normal bold 20px/32px proxima_novaregular;
             letter-spacing: 0.3px;
-            color: #002D57;
+            color: #002F87;
             margin: 0;
         }
     }
@@ -873,7 +877,7 @@ p {
     .titulo {
         font: normal normal bold 36px/58px proxima_novaregular;
         letter-spacing: 0.54px;
-        color: #002D57;
+        color: #002F87;
     }
 
     .views-field-nothing {
@@ -1044,7 +1048,7 @@ p {
 
             .form-actions {
                 .js-form-submit {
-                    background-color: #002D57;
+                    background-color: #002F87;
                     border-radius: 25px;
                     padding: 0.7rem 2rem;
                     line-height: 1;
@@ -1115,7 +1119,11 @@ footer {
                             color: #FFFFFF;
                             padding: 0.4rem 0;
                             line-height: 1.6;
-                        }
+                        
+							&:hover {
+								text-decoration:underline !important;
+							}
+						}
                     }        
                 }
             }
@@ -1364,7 +1372,7 @@ footer {
     .titulo {
         font: normal normal bold 28px/45px proxima_novaregular;
         letter-spacing: 0.54px;
-        //color: #002D57;
+        //color: #002F87;
     }
 
     .items-texto {
@@ -1623,7 +1631,7 @@ footer {
             justify-content: center;
             
             .field-content {
-                background-color: #002D57;
+                background-color: #002F87;
                 border-radius: 25px;
                 padding: 0.7rem 2rem;
                 line-height: 1;
@@ -2498,7 +2506,7 @@ footer {
 		z-index: 501;
 	}
 	.dialog-off-canvas-main-canvas{
-		padding-top: 7em;
+		padding-top: 4.5em;
 		@include mobile{
 			padding-top: 1em;
 		}

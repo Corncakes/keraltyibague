@@ -51,12 +51,12 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
         <div class="row">
-            <div class="col-12 col-md-3 icono d-flex flex-column align-items-center">
+            <div class="col-12 col-md-3 icono d-flex flex-column align-items-center align-items-md-start">
                 {% if content.field_icono|render is not empty %}
                     {{ content.field_icono.0 }}
                 {% endif %}
             </div>
-            <div class="col-12 col-md-8 d-flex flex-column align-items-center">
+            <div class="col-12 col-md-8 d-flex flex-column align-items-center  align-items-md-start">
                 {% if content.field_titulo|render is not empty %}
                     <h4 class="titulo">{{ content.field_titulo.0 }}</h4>
                 {% endif %}
