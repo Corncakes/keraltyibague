@@ -29,6 +29,26 @@
 			"mouseDrag": true,
 			controlsText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
 		});
+		var slider_news = tnn({ 
+			container: '.view-noticias .news-wrap',
+			mode: 'carousel',
+			"mouseDrag": true,
+			controlsText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+			responsive: {
+                576: {
+					controls:true,
+                    gutter:-10,
+                    items: 1
+                },
+			    768: {
+					controls:false,
+					items: 2
+                },
+                1024: {
+                    items: 4
+				}
+            }
+		});
 	  }
 	  var acc = document.querySelectorAll(".site-footer .block-menu");
 	  var i;

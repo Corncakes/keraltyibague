@@ -408,10 +408,22 @@ p {
     }
 
     .tns-controls {
+		@include mobile{
+			display:none;
+		}
         button {
-            background-color: #8CC63F;
+            background-color: #008767;
             border: none;
-            
+            width:3em;
+			height:3em;
+			border-radius:50%;
+			transition:all 0.5s ease-out;
+			color:white;
+			&:hover {
+						background: #2cbe9e;
+						color:#2c5275;
+					}
+
             &:first-child {
                 position: absolute;
                 left: 0;
@@ -764,7 +776,7 @@ p {
         .form-item-search-api-fulltext {
             margin-bottom: 0 !important;
             position: relative;
-
+			width:100%;
             label {
                 display: none;
             }
@@ -876,7 +888,42 @@ p {
 /* VISTA DE NOTICIAS
 --------------------------------------------------*/
 
+
 #block-views-block-noticias-block-1 {
+	#tns2-ow {
+		.tns-nav{
+			display:none;
+		}
+		.tns-controls{
+			
+			button {
+				background-color: #008767;
+				border: none;
+				width:3em;
+				height:3em;
+				border-radius:50%;
+				transition:all 0.5s ease-out;
+				color:white;
+				&:hover {
+						background: #2cbe9e;
+						color:#2c5275;
+					}
+	
+				&:first-child {
+					position: absolute;
+					left: 0;
+					top: 54%;
+					z-index:2;
+				}
+				&:last-child {
+					position: absolute;
+					right: 0;
+					top: 54%;
+					z-index:2;
+				}
+			}
+		}
+	}
     .titulo {
         font: normal normal bold 36px/58px proxima_novaregular;
         letter-spacing: 0.54px;
@@ -905,6 +952,10 @@ p {
 	flex-direction:column;
 	justify-content:space-between;
 	padding:0;
+	@include mobile{
+		width:90%;
+		margin:auto
+	}
     .categoria {
         position: absolute;
         left: 0;
@@ -2047,7 +2098,7 @@ footer {
 			img {	
 				//border-radius: 10px;
 				border: 1px solid #707070;
-				transition: background .3s linear;
+				transition: filter .3s linear;
 				&:hover{
 					filter: brightness(70%);
 				}
@@ -2285,6 +2336,7 @@ footer {
                 letter-spacing: 0.27px;
                 color: #1E3D7B;
                 padding: 1rem 0;
+				font-size:1.33333em
 
                 a {
                     color: #1E3D7B;
@@ -2390,8 +2442,9 @@ footer {
 	@extend .mx-md-3;
 	.info{
 		.direccion{
-			font-size:0.8em;
+			font-size:0.875em;
 			color:#1E3D7B;
+			
 		}
 	}
 	.field--name-field-media-image {
