@@ -2555,3 +2555,74 @@ footer {
 		}
 	}
 }
+
+/* MENU RESALTADO
+
+*************************************/
+.resaltado{
+	border-radius: 0px 0px 5px 5px;
+    background-color: #002E58;
+    color: #ffffff;
+}
+.node--type-servicio{
+	#block-keralty-ibague-theme-main-menu{
+		ul{
+			li:nth-child(3){
+				a{
+					@extend .resaltado;
+				}
+			}
+		}
+	} 
+}
+
+.node--type-especialista{
+	#block-keralty-ibague-theme-main-menu{
+		ul{
+			li:nth-child(3){
+				a{
+					@extend .resaltado;
+				}
+			}
+		}
+	}
+}
+
+.node--type-especialidad{
+	#block-keralty-ibague-theme-main-menu{
+		ul{
+			li:nth-child(4){
+				a{
+					@extend .resaltado;
+				}
+			}
+		}
+	} 
+
+}
+
+.node--type-article{
+	#block-keralty-ibague-theme-main-menu{
+		ul{
+			li:nth-child(5){
+				a{
+					@extend .resaltado;
+				}
+			}
+		}
+	} 
+
+}
+
+.node--type-articulo-de-investigacion{
+	#block-keralty-ibague-theme-main-menu{
+		ul{
+			li:nth-child(6){
+				a{
+					@extend .resaltado;
+				}
+			}
+		}
+	} 
+
+}
