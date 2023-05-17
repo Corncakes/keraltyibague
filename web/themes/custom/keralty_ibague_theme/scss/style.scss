@@ -2642,9 +2642,8 @@ footer {
 	#block-keralty-ibague-theme-content { 
 		article {
 			.field--name-field-elementos-de-texto{
-				div{
-					justify-content:start !important;
-				}
+				justify-content:flex-start !important;
+				
 			}
 		}
 	}
