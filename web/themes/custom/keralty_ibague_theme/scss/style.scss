@@ -20,6 +20,9 @@ font-family: 'proxima_novaregular';
 }
 body {
     background: $white;
+	@include mobile{
+		font-size:14px !important;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,6 +101,9 @@ h2 {
 
 p {
     font: normal normal normal 16px/25px proxima_novaregular;
+	@include mobile{
+		font-size:14px !important;
+	}
     letter-spacing: 0.24px;
     color: #2E2E2E;
     opacity: 1;
@@ -344,31 +350,33 @@ p {
 						}
                     }
 
-                    .subtitulo, .subtitulo * {
-                        font: normal normal normal 32px/38px proxima_novaregular;
+                    .subtitulo{
+                        font: normal normal normal 32px/38px proxima_novaregular !important;
                         letter-spacing: 0.48px;
                         color: #FAFAFA;
 						@include mobile{
-							font-size:0.8em;
+							font: normal normal normal 18px proxima_novaregular !important;
 							line-height:1.2;
 						}
                     }
 
                     .enlace {
-                        background-color: #008767;
-                        border-radius: 25px;
-                        padding: 0.7rem 2rem;
-                        line-height: 1;
-						&:hover {
-							background: #00615C;
-
+                        padding:0;
+						margin:1em 0;
 						a {
+							background-color: #fff0;
+							border-radius: 25px;
+							padding: 0.7rem 2rem;
+							line-height: 1;
+							border:white 2px solid;
 							color: $white;
-							}
-						}
-                        a {
+					
                             font: normal normal bold 15px/18px proxima_novaregular;
                             color: #FAFAFA;
+							&:hover {
+								background: $white;
+								color:#1e3d7b !important;
+							}
                         }
                     }
                 }
