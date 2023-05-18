@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="_Color"
+   data-name="↳Color"
+   width="20"
+   height="20"
+   viewBox="0 0 20 20"
+   version="1.1"
+   sodipodi:docname="search2.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs7316" />
+  <sodipodi:namedview
+     id="namedview7314"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="27.860007"
+     inkscape:cx="2.0459435"
+     inkscape:cy="9.9066737"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="_Color" />
+  <rect
+     style="fill:#008fde;fill-opacity:1"
+     id="rect7374"
+     width="20.567116"
+     height="20.531221"
+     x="-0.25125623"
+     y="-0.14357498" />
+  <path
+     id="_Color-2"
+     data-name=" ↳Color"
+     d="m 15.557861,16.697776 v 0 L 11.727727,12.87903 v -0.60296 l -0.207016,-0.214385 a 4.9864775,4.9864775 0 1 1 0.535964,-0.535964 l 0.214385,0.207015 h 0.602961 l 3.822764,3.826115 z M 8.2774567,4.8308568 A 3.4475901,3.4475901 0 1 0 11.725047,8.2784469 3.4516099,3.4516099 0 0 0 8.2774567,4.8308568 Z"
+     fill="#008fde"
+     style="fill:#ffffff;stroke-width:0.669955" />
+</svg>
