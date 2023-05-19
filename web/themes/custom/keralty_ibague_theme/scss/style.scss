@@ -188,11 +188,11 @@ p {
 	#views-exposed-form-busqueda-page-1{
 		@include mobile{
 			position:absolute;
-			width:100vw;
+			width:92vw;
 			background-color:white;
 			top:-0.6em;
 			left:-7vw;
-			padding:1em;
+			padding:1em 5vw;
 			height:5.5em;
 		}
 		button{
@@ -228,7 +228,7 @@ p {
 	@include mobile {
 		background-color: #fff !important;
 		position:absolute;
-		right:0px;
+		right:2em;
 		height:4em;
 	}
     .navbar-brand {
@@ -242,9 +242,9 @@ p {
         justify-content: center !important;
 		@include mobile{
 			position: absolute;
-			left: -81vw;
+			left: -75vw;
 			top:4em;
-			width: 100vw;
+			width: 93vw;
 			background-color: white;
 			justify-content: start !important;
 		}
