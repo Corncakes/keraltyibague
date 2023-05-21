@@ -158,6 +158,9 @@ p {
     background: #00615C url(../images/arrow.svg) center center;
     background-repeat: no-repeat;
     border-radius: 50%;
+	@include mobile{
+		bottom: 54px !important;
+	}
 }
 
 .navbar-brand {
@@ -188,11 +191,11 @@ p {
 	#views-exposed-form-busqueda-page-1{
 		@include mobile{
 			position:absolute;
-			width:92vw;
+			width:100vw;
 			background-color:white;
 			top:-0.6em;
 			left:-7vw;
-			padding:1em 5vw;
+			padding:1em 4vw;
 			height:5.5em;
 		}
 		button{
@@ -228,7 +231,7 @@ p {
 	@include mobile {
 		background-color: #fff !important;
 		position:absolute;
-		right:2em;
+		right:0em;
 		height:4em;
 	}
     .navbar-brand {
@@ -839,7 +842,7 @@ p {
 --------------------------------------------------*/
 
 .form-buscar {
-    flex-basis: 65%;
+    flex-basis: 78%;
     position: relative;
     
     form {
@@ -963,7 +966,9 @@ p {
 
 
 #block-views-block-noticias-block-1 {
+	position:relative;
 	#tns2-ow {
+		
 		.tns-nav{
 			display:none;
 		}
@@ -1017,7 +1022,6 @@ p {
     box-shadow: 0px 3px 6px #7575754D;
     border-radius: 5px;
     position: relative;
-    height: 100%;
     margin-bottom: 1.5rem;
     min-height: 430px;
     background: #ffffff;
@@ -1074,7 +1078,6 @@ p {
         letter-spacing: 0px;
         color: #151D41;
         padding: 0.5rem 1rem;
-		height:100%;
     }
 
     .enlace {
@@ -1153,43 +1156,81 @@ p {
    } 
 }
 
-    #views-exposed-form-noticias-block-2 {
-        margin: 3rem 0;
+.exposed-input-date{
+	width:20%;
+	@include mobile{
+		width:50%;
+	}
+	.bef-datepicker {
+		&.form-control {
+			background-color:white !important;
+			&.hasDatepicker {
+				background: url('../images/calendar-day-solid.svg') right 10px center no-repeat;
+			}
+		}
+	}
+}
 
-        .bef-datepicker {
-            &.form-control {
-			    background-color:white !important;
-                &.hasDatepicker {
-                    background: url('../images/awesome-calendar-alt.svg') right 10px center no-repeat;
-                }
-            }
-        }
-        & > div {
-            justify-content: center;
-            align-items: flex-end;
-			@extend .row;
-            .js-form-item, .form-actions {
-                width: auto;
-				
-            }
-
-            .form-actions {
-                .js-form-submit {
-                    background-color: #0071A3;
-                    border-radius: 25px;
-                    padding: 0.7rem 2rem;
-                    line-height: 1;
-                    color: #ffffff;
-                    border: none;
-					&:hover{
-						background-color:#002E58;
-					}
-                }
+.exposed-filter-keralty{
+	 margin: 3rem 0;
+	& > div {
+		label{
+			font-weight:bolder;
+		}
+		justify-content: center;
+		align-items: flex-end;
+		@extend .row;
+		.js-form-item-title{
+			width:35%;
+			@include mobile{
+				width:100%;
+			}
+			#edit-title{
+				background-color:white !important;
+				background: url('../images/search3.svg') right 10px center no-repeat;
+			}
+		}
+        .form-actions {
+			width: 10%;
+            .js-form-submit {
+                background-color: #0071A3;
+                border-radius: 25px;
+                padding: 0.7rem 2rem;
+                line-height: 1;
+                color: #ffffff;
+                border: none;
+				&:hover{
+					background-color:#002E58;
+				}
             }
         }
     }
+}
+
+#views-exposed-form-noticias-block-2 {
+   & > div {
+		.js-form-item-created{
+			@extend .exposed-input-date;
+		}
+		.js-form-item-created-1{
+			@extend .exposed-input-date;
+		}
+	}
+	
+	@extend .exposed-filter-keralty;
+
+}
+
 #views-exposed-form-articulos-de-investigacion-block-1{
-	@extend #views-exposed-form-noticias-block-2
+	& > div {
+		.js-form-item-field-fecha__value{
+			@extend .exposed-input-date;		
+		} 
+		.js-form-item-field-fecha__value-1{
+			@extend .exposed-input-date;
+		}
+	}
+	@extend .exposed-filter-keralty;
 }
 
 #block-views-block-noticias-block-3 {
@@ -1804,51 +1845,61 @@ footer {
                 color: #1E3D7B;
             }
         }
-
-        .estudios-investigacion-card {
-            background: #ffffff;
-            box-shadow: 0px 3px 6px #7575754D;
-            border: 1px solid #D4CACA;
-            border-radius: 15px;
-            position: relative;
-            height: 100%;
-            margin-bottom: 2rem;
-            padding: 1rem;
-			text-align:center;
-            
-			.icono{
-				color:#000066;
-				font: normal normal bold 36px/40px proxima_novaregular;
-				padding: 1rem 0;
-			}
-            .titulo {
-       
-                font: normal normal bold 18px/22px proxima_novaregular;
-                letter-spacing: 0.27px;
-                color: #1E3D7B;
-                padding: 1rem 0;
-
-                a {
-                    color: #1E3D7B;
-                }
-            }
-
-            .info {
-                
-				.idioma{
-				   font: normal normal bold 16px/20px proxima_novaregular;
-				   color:#0F1903;
-				   padding: 1rem 0;
-				   border-bottom: 1px solid #707070;
-				
+		.views-field-nothing{
+			height:93%;
+			margin-bottom: 2rem;	
+			.estudios-investigacion-card {
+				background: #ffffff;
+				box-shadow: 0px 3px 6px #7575754D;
+				border: 1px solid #D4CACA;
+				border-radius: 15px;
+				position: relative;
+				height: 100%;
+				padding: 1rem;
+				text-align:center;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				justify-content: space-between;
+				.icono{
+					color:#000066;
+					font: normal normal bold 36px/40px proxima_novaregular;
+					padding: 1rem 0;
 				}
-                .fecha {
-					font: normal normal normal 14px/17px proxima_novaregular;
-					letter-spacing: 0.21px;
-					color: #446519;
+				.titulo {
+					font: normal normal bold 18px/22px proxima_novaregular;
+					letter-spacing: 0.27px;
+					color: #1E3D7B;
 					padding: 1rem 0;
 				
-				}                        
+					a {
+						color: #1E3D7B;
+						display: -webkit-box;
+						-webkit-line-clamp: 3;
+						-webkit-box-orient: vertical;  
+						text-overflow: ellipsis;
+						max-width:100%;
+						overflow:hidden;
+					}
+				}
+			
+
+				.info {
+                
+					.idioma{
+					font: normal normal bold 16px/20px proxima_novaregular;
+					color:#0F1903;
+					padding: 1rem 0;
+					/*border-bottom: 1px solid #707070;*/
+					
+					}
+					.fecha {
+						font: normal normal normal 14px/17px proxima_novaregular;
+						letter-spacing: 0.21px;
+						color: #446519;
+						padding: 1rem 0;
+				
+					}                        
                     .enlace {
                         display: flex;
                         justify-content: center;
@@ -1879,6 +1930,7 @@ footer {
                             }
                         }
                     }
+				}	
             }
         }
     }

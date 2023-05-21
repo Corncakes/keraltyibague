@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 448 512"
+   version="1.1"
+   id="svg10177"
+   sodipodi:docname="calendar-day-solid.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10181" />
+  <sodipodi:namedview
+     id="namedview10179"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.5390625"
+     inkscape:cx="98.111675"
+     inkscape:cy="283.28934"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10177" />
+  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+  <path
+     id="path10187"
+     style="fill:#757575;fill-opacity:1;stroke-width:0.832487"
+     d="m 256.16244,294.73096 c -7.32589,0 -13.3198,5.99391 -13.3198,13.3198 v 79.91878 c 0,7.32589 5.99391,13.3198 13.3198,13.3198 h 79.91878 c 7.32589,0 13.3198,-5.99391 13.3198,-13.3198 v -79.91878 c 0,-7.32589 -5.99391,-13.3198 -13.3198,-13.3198 z M 128,46 C 110.30002,46 96,60.300018 96,78 v 32 H 74 c -26.499973,0 -48,21.50003 -48,48 v 48 222 c 0,26.49997 21.500027,48 48,48 h 300 c 26.49997,0 48,-21.50003 48,-48 V 198 158 c 0,-26.49997 -21.50003,-48 -48,-48 H 352 V 78 c 0,-17.699982 -14.30002,-32 -32,-32 -17.69998,0 -32,14.300018 -32,32 v 32 H 160 V 78 C 160,60.300018 145.69998,46 128,46 Z M 70.019531,216.88281 H 377.98047 V 431.16797 H 70.019531 Z"
+     sodipodi:nodetypes="ssssssssssscsscsssscsscsssccssccccc" />
+</svg>
