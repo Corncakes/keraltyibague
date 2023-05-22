@@ -1023,7 +1023,7 @@ p {
     border-radius: 5px;
     position: relative;
     margin-bottom: 1.5rem;
-    min-height: 430px;
+    height: 93%;
     background: #ffffff;
 	display:flex;
 	flex-direction:column;
@@ -1078,33 +1078,29 @@ p {
         letter-spacing: 0px;
         color: #151D41;
         padding: 0.5rem 1rem;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;  
+		text-overflow: ellipsis;
+		max-width:100%;
+		overflow:hidden;
     }
+	.enlace-wrap{
+		margin:2em 1em;
+		
+		.enlace {
+			background-color: $primary;
+			border-radius: 25px;
+			padding: 0.7rem 2rem;
+			line-height: 1;
+			color:white;
+			/*display: inline-block;*/
+			
+			&:hover {
+				background: #00615C;
 
-    .enlace {
-        background-color: $primary;
-        border-radius: 25px;
-        padding: 0.7rem 2rem;
-        line-height: 1;
-        margin: 1rem;
-        /*display: inline-block;*/
-		align-self:start;
-        &:hover {
-            background: #00615C;
-
-            a {
-                color: $white;
-            }
-        }
-
-        a {
-            font: normal normal bold 15px/18px proxima_novaregular;
-            color: $white;
-
-            &:hover {
-                text-decoration: none;
-                color: $white;
-            }
-        }
+			}
+		}
     }
 }
 .page-node-5{
@@ -1175,13 +1171,6 @@ p {
 	 margin: 3rem 0;
 	& > div {
 		label{
-			font-weight:bolder;
-		}
-		justify-content: center;
-		align-items: flex-end;
-		@extend .row;
-		.js-form-item-title{
-			width:35%;
 			@include mobile{
 				width:100%;
 			}
@@ -2454,7 +2443,7 @@ footer {
             position: relative;
             height: 100%;
             margin-bottom: 2rem;
-            padding: 1rem;
+            padding-bottom: 2rem;
 			text-align:center;
             
 			.icono{
@@ -2464,11 +2453,11 @@ footer {
 			}
             .titulo {
        
-                font: normal normal bold 18px/22px proxima_novaregular;
+                font: normal normal bold 1.5em proxima_novaregular;
                 letter-spacing: 0.27px;
                 color: #1E3D7B;
-                padding: 1rem 0;
-				font-size:1.33333em
+                padding: 1rem;
+				font-size:1.5em;
 
                 a {
                     color: #1E3D7B;
@@ -2576,15 +2565,14 @@ footer {
 		.direccion{
 			font-size:0.875em;
 			color:#1E3D7B;
-			
+			padding:0 1em;
 		}
 	}
-	.field--name-field-media-image {
-		img{
-			width:100%;
-			text-align:center;
-		}
+	img{
+		width:100%;
+		text-align:center;
 	}
+	
 }
 
 #sede{
