@@ -1170,7 +1170,13 @@ p {
 .exposed-filter-keralty{
 	 margin: 3rem 0;
 	& > div {
+		@extend .row;
 		label{
+			font-weight:border;
+		}
+
+		.js-form-item-title{
+			width:35%;
 			@include mobile{
 				width:100%;
 			}
@@ -1858,6 +1864,9 @@ footer {
 						text-overflow: ellipsis;
 						max-width:100%;
 						overflow:hidden;
+						&:hover{
+							text-decoration:underline !important;
+						}
 					}
 				}
 			
