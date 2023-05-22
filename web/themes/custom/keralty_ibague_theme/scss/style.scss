@@ -1788,29 +1788,18 @@ footer {
             justify-content: center;
             
             .field-content {
-                background-color: #0071A3 ;
-                border-radius: 25px;
-                padding: 0.7rem 2rem;
-                line-height: 1;
-                margin: 0rem 1rem 1.2rem 1rem;
-                display: inline-block;
-        
-                &:hover {
-                    background: #002E58;
-        
-                    a {
-                        color: #ffffff;
-                    }
-                }
-        
                 a {
-                    font: normal normal bold 15px/18px proxima_novaregular;
+					background-color: #0071A3 ;
+					border-radius: 25px;
+					padding: 0.7rem 2rem;
+					line-height: 1;
+					margin: 0rem 1rem 1.2rem 1rem;
+					display: inline-block;
                     color: #ffffff;
+					&:hover {
+						background: #002E58;
         
-                    &:hover {
-                        text-decoration: none;
-                        color: #ffffff
-                    }
+					}
                 }
             }
         }
