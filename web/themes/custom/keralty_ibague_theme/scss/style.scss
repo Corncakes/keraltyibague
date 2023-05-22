@@ -1172,9 +1172,13 @@ p {
 	& > div {
 		@extend .row;
 		label{
-			font-weight:border;
+			font-weight:bolder;
 		}
-
+		.js-form-item{
+			display: flex;
+			justify-content: end;
+			flex-direction: column;
+		}
 		.js-form-item-title{
 			width:35%;
 			@include mobile{
