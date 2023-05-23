@@ -2879,3 +2879,9 @@ footer {
 		}
 	}
 }
+
+.col-md-25{
+ @include but-mobile{
+	width:20%;
+ }
+}
