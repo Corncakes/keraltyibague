@@ -124,6 +124,10 @@ p {
     width: 100%;
     background: transparent url(/sites/default/files/media-icons/triangulo.png) center top no-repeat;
     background-size: 180px;
+	@include mobile{
+		height: 28px;
+		background-size: 70px;
+	}
 }
 
 .reversed-triangle {
@@ -133,6 +137,10 @@ p {
     background-size: 180px;
     transform: matrix(-1, 0, 0, -1, 0, 0);
     border-bottom: 1px solid #ccc;
+	@include mobile{
+		height: 28px;
+		background-size: 70px;
+	}
 }
 
 .more-link {
