@@ -2880,8 +2880,8 @@ footer {
 	}
 }
 
-.col-md-25{
+.grid-5-col{
  @include but-mobile{
-	width:20%;
+	width:20% !important;
  }
 }
