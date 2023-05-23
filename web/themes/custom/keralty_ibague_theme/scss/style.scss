@@ -2709,6 +2709,20 @@ footer {
 
 /*404*/
 
+.node--type-pagina-auxiliar{
+.imagen{
+	position: relative;
+    overflow: hidden;
+    height: 100vh;
+	img{
+		height: 100vh !important;
+		max-width: unset;
+		position: absolute;
+		right: 0px;
+		margin-right: 0;
+		opacity: 0.5;
+	}
+}
 .info404{
     top: 0%;
     padding-left: 3em;
@@ -2732,18 +2746,19 @@ footer {
 	font-family:'roboto' !important;
     color:#183878 !important;
 	strong{
-		font-size:2em;
-	}
-  }
-  p{
-	color:#183878 !important;
-	margin:0 !important;
-	padding:0;
-	line-height:1.4;
-	font-size:1.5em !important;
-  }
-}
 
+			font-size:2em;
+		}
+	}
+	p{
+		color:#183878 !important;
+		margin:0 !important;
+		padding:0;
+		line-height:1.4;
+		font-size:1.5em !important;
+		}
+	}
+}
 /*temp*/
 
 .dialog-off-canvas-main-canvas{
