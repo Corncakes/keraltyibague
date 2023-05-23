@@ -1580,6 +1580,7 @@ footer {
 --------------------------------------------------*/
 
 .breadcrumb {
+	
     .breadcrumb-item {
         a {
             font: normal normal normal 14px/35px proxima_novaregular;
@@ -1592,10 +1593,20 @@ footer {
             letter-spacing: 0px;
             color: #777777;
             text-decoration: underline;
+			font-weight:bolder;
+			&::before{
+				font-weight:100 !important;
+				height:100% !important;
+			}
         }
+		&::before{
+			display: flex;
+			justify-content: end;
+			flex-direction: column;
+			height: 81%;
+		}
     }
 }
-
 
 /* VIEWS SERVICIOS DESTACADOS
 --------------------------------------------------*/
@@ -2762,3 +2773,5 @@ footer {
 		}
 	}
 }
+
+
