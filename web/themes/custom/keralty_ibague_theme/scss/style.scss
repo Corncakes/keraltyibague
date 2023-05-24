@@ -1214,6 +1214,13 @@ p {
 			justify-content: end;
 			flex-direction: column;
 		}
+		.js-form-item-field-categoria-target-id{
+			width:35%;
+			@include mobile{
+				width:100%;
+				margin-bottom:2.5em !important;
+			}
+		}
 		.js-form-item-title{
 			width:35%;
 			@include mobile{
