@@ -20,6 +20,32 @@
           $(".form-buscar").hide(); 
         }
       });
+	  /*Slideshow de especialidades quirurgicas en detalle de especialidades quirurgicas*/
+	   if (document.querySelector('.node--type-especialidad')){
+	  var slider_services = tne({ 
+			container: '.view-especialidades-quirurgicas .especialidades-wrap',
+			mode: 'carousel',
+			"mouseDrag": true,
+			controlsText: ['<i class="fa-solid fa-angle-left"></i>','<i class="fa-solid fa-angle-right"></i>'],
+			responsive: {
+                376: {
+					controls:false,
+                    gutter:-10,
+                    items: 2
+                },
+			    768: {
+					controls:false,
+					items: 2
+                },
+                1024: {
+					controls:true,
+                    items: 4
+				}
+            }
+		});
+		}
+	  
+	  /*Slideshow de servicios en detalle de servicios*/
 	    if (document.querySelector('.node--type-servicio')){
 	  var slider_services = tnsv({ 
 			container: '.view-servicios .servicios-wrap',
@@ -43,6 +69,8 @@
             }
 		});
 		}
+		
+	  /*Slideshow de noticias en el banner del home*/
       if (document.querySelector('.page-node-1')){
 		var slider = tns({ 
 			container: '.view-slider .view-content.row',
