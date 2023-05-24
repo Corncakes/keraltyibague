@@ -2831,7 +2831,7 @@ footer {
 .imagen{
 	position: relative;
     overflow: hidden;
-    height: 100vh;
+    width:100%;
 	img{
 		height: 100vh !important;
 		max-width: unset;
@@ -2839,6 +2839,7 @@ footer {
 		right: 0px;
 		margin-right: 0;
 		opacity: 0.5;
+		height: 100vh;
 		width:auto !important;
 	}
 }
