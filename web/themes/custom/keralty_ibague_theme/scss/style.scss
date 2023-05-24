@@ -120,10 +120,10 @@ p {
 }
 
 .triangle {
-    height: 45px;
+    height: 36px;
     width: 100%;
     background: transparent url(/sites/default/files/media-icons/triangulo.png) center top no-repeat;
-    background-size: 180px;
+    background-size: 90px;
 	@include mobile{
 		height: 28px;
 		background-size: 70px;
@@ -144,9 +144,9 @@ p {
 }
 
 .more-link {
-    margin: 2rem;
+    padding: 2rem;
 	@include mobile{
-		margin: 2rem 0;
+		padding: 2rem 0;
 	}
 }
 
@@ -1731,21 +1731,7 @@ footer {
 
 /* VIEWS SERVICIOS
 --------------------------------------------------*/
-
-#block-views-block-servicios-block-1 {
-    margin-top: 3rem;
-
-    .view-header {
-        .titulo {
-            color: #1E3D7B;
-        }
-    }
-
-    .servicios {
-        background-color:#f5f5f5;
-		/*background-image: linear-gradient(to bottom, rgb(219, 219, 219), rgba(245,245,245));*/
-
-        .servicios-card {
+.servicios-card-general {
             box-shadow: 0px 3px 6px #7575754D;
             border-radius: 15px;
             position: relative;
@@ -1753,40 +1739,7 @@ footer {
             margin-bottom: 1rem;
             background-color: #ffffff;
 			padding:0px;
-			
-			.views-field-field-imagen-de-portada {
-				div{
-					position: relative;
-					img{
-						width:100%;
-						transition: filter 0.3s linear;
-						&:hover{
-						filter: brightness(70%);
-						}
-					}
-			}
-		}
-            .views-field-title {
-                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
-                justify-content: center;
-				text-align:center;
-                font: normal normal bold 16px/25px proxima_novaregular;
-                letter-spacing: 0px;
-                color: #151D41;
-                margin: 1.5rem;
-				align-items:center;
-				display:flex;
-                line-height: 1.2;
-                height: 3rem;
-				font-size:1.1em;
-				@include mobile{
-					font-size:16px;
-					margin: 0.9rem;
-				}
-            }
-        }
-
-        .views-field-view-node {
+			.views-field-view-node {
             display: flex;
             justify-content: center;
             
@@ -1819,9 +1772,126 @@ footer {
                     }
                 }
             }
+			.views-field-field-imagen-de-portada {
+				div{
+					position: relative;
+					img{
+						width:100%;
+						transition: filter 0.3s linear;
+						&:hover{
+						filter: brightness(70%);
+						}
+					}
+			}
+		}
+            .views-field-title {
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 16px/25px proxima_novaregular;
+                justify-content: center;
+				text-align:center;
+                font: normal normal bold 16px/25px proxima_novaregular;
+                letter-spacing: 0px;
+                color: #151D41;
+                margin: 1.5rem;
+				align-items:center;
+				display:flex;
+                line-height: 1.2;
+                height: 3rem;
+				font-size:1.1em;
+				@include mobile{
+					font-size:16px;
+					margin: 0.9rem;
+				}
+            }
+        }
+#block-views-block-servicios-block-1 {
+    margin-top: 3rem;
+
+    .view-header {
+        .titulo {
+            color: #1E3D7B;
         }
     }
 
+    .servicios {
+        background-color:#f5f5f5;
+		/*background-image: linear-gradient(to bottom, rgb(219, 219, 219), rgba(245,245,245));*/
+
+        .servicios-card{
+			@extend .servicios-card-general
+		}
+
+        
+        }
+    }
+#block-views-block-servicios-block-3{
+.servicios{
+	background-color:#f5f5f5;
+	padding:2em 0;
+	@include mobile{
+		padding:1em 0;
+	
+	}
+}
+#tns1-ow {
+	.tns-item {
+    height: 100%;
+}
+	#tns1-iw {
+    margin: 0px auto;
+    width:70%;
+	@include mobile{
+		width:90%;
+	}
+    overflow: hidden;
+	}
+		position:relative;
+		.tns-nav{
+			display:none;
+		}
+		.tns-controls{
+			
+			button {
+				background-color: #8CC63F;
+				border: none;
+				width:3em;
+				height:3em;
+				border-radius:50%;
+				transition:all 0.5s ease-out;
+				color:#2c5275;
+				font-weight:bolder;
+				&:hover {
+						background: #008767;
+						color:#fff;
+					}
+	
+				&:first-child {
+					position: absolute;
+					left: 90px;
+					top: 45%;
+					z-index:2;
+					
+				}
+				&:last-child {
+					position: absolute;
+					right: 90px;
+					top: 45%;
+					z-index:2;
+					
+				}
+			}
+		}
+	}
+	.servicios-wrap{
+		background-color:#f5f5f5;
+	}
+	.servicios-card{
+			@extend .servicios-card-general
+		}
+	.more-link{
+		background-color:#f5f5f5;
+	}
+	
+}
 
 /* VIEWS ESPECIALIDADES
 --------------------------------------------------*/

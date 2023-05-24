@@ -20,6 +20,29 @@
           $(".form-buscar").hide(); 
         }
       });
+	    if (document.querySelector('.node--type-servicio')){
+	  var slider_services = tnsv({ 
+			container: '.view-servicios .servicios-wrap',
+			mode: 'carousel',
+			"mouseDrag": true,
+			controlsText: ['<i class="fa-solid fa-angle-left"></i>','<i class="fa-solid fa-angle-right"></i>'],
+			responsive: {
+                376: {
+					controls:false,
+                    gutter:-10,
+                    items: 2
+                },
+			    768: {
+					controls:false,
+					items: 2
+                },
+                1024: {
+					controls:true,
+                    items: 4
+				}
+            }
+		});
+		}
       if (document.querySelector('.page-node-1')){
 		var slider = tns({ 
 			container: '.view-slider .view-content.row',
@@ -35,7 +58,7 @@
 			"mouseDrag": true,
 			controlsText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
 			responsive: {
-                576: {
+                376: {
 					controls:true,
                     gutter:-10,
                     items: 1
@@ -49,6 +72,7 @@
 				}
             }
 		});
+		
 	  }
 	  var acc = document.querySelectorAll(".site-footer .block-menu");
 	  var i;
