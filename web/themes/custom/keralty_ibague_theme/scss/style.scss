@@ -2432,11 +2432,12 @@ footer {
             letter-spacing: 0.2px !important;
             color: #FFFFFF !important;
 			min-width:100%;
-			
+			text-transform:uppercase;
 			@include mobile{
 				min-width:unset;
 				padding:0 1em 0 0;
 				margin:0;
+				text-transform:none;
 			}
         }
 		a{
