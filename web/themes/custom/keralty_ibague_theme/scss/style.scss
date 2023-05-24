@@ -143,14 +143,9 @@ p {
 	}
 }
 
-.more-link {
-    padding: 2rem;
-	@include mobile{
-		padding: 2rem 0;
-	}
-}
 
-.more-link {
+
+.enlace-mas {
     text-align: center;
 
     a {
@@ -168,8 +163,19 @@ p {
 	
 	
 }
+.more-link {
+    padding: 2rem;
+	@include mobile{
+		padding: 2rem 0;
+	}
+	@extend .enlace-mas;
+}
 .boton{
-	@extend .more-link;
+	 margin: 2rem;
+	@include mobile{
+		margin: 2rem 0;
+	}
+	@extend .enlace-mas;
 }
 #scrollTopButton-image {
     background: #00615C url(../images/arrow.svg) center center;
