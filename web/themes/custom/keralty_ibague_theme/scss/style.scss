@@ -2473,7 +2473,9 @@ footer {
 
 	.view-especialistas {
 		margin: 5rem;
-
+		@include mobile{
+			margin:1em 0em;
+		}
 		.view-header {
 			.titulo {
 				color: #1E3D7B;
