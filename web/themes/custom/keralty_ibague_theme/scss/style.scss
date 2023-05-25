@@ -1253,7 +1253,19 @@ p {
         }
     }
 }
+#views-exposed-form-noticias-block-3 {
+   & > div {
+		.js-form-item-created{
+			@extend .exposed-input-date;
+		}
+		.js-form-item-created-1{
+			@extend .exposed-input-date;
+		}
+	}
+	
+	@extend .exposed-filter-keralty;
 
+}
 #views-exposed-form-noticias-block-2 {
    & > div {
 		.js-form-item-created{
