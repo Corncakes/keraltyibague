@@ -96,8 +96,17 @@
 
     <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
         {{ content.body }}
-        {{ content.links }}
-    </div>
+		<div class="inline__links">
+			<nav class="links inline nav links-inline">
+				<span class="node-readmore nav-link">
+					<a href="{{ url }}" rel="tag" title="{{ node.label }}" hreflang="es">
+						Consúltalos
+						<span class="visually-hidden"> sobre {{ node.label }}</span>
+					</a>
+				</span>
+			</nav>
+		</div>
+	</div>
   </header>
 
   <div class="imagen g-0 col-sm-5 d-none d-md-flex justify-content-end">

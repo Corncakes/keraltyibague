@@ -5,7 +5,9 @@ Description: Bootstrap 4 with Sass
 
 // import files
 @import "import";
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@700&family=Josefin+Sans:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
 /*
 font-family: 'Hind', sans-serif;
 font-family: 'Josefin Sans', sans-serif;
@@ -2334,76 +2336,7 @@ footer {
 
 /* VIEWS DETALLE DE SERVICIO
 --------------------------------------------------*/
-
-#block-views-block-especialistas-block-1 {
-	.views-field-title{
-		color:#2e2e2e;
-	}
-    .views-field-field-titulo-profesional {
-        color: #002F87;
-        margin-bottom: 2.5rem;
-    }
-
-    .imagen {
-        img {
-            border-radius: 20px;
-        }
-    }
-
-    .texto {
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 2.5rem;
-    }
-
-    .estudios {
-        
-
-        .item-list {
-            ul {
-                li {
-                    border: none;
-                    margin-bottom: 1.5rem;
-                }
-            }
-        }
-    }
-
-   /* .especialidades {
-        h4 {
-            display: inline-block;
-            background: #0071A3;
-            padding: 0.5rem 1.5rem;
-            line-height: 1;
-            font: normal normal bold 1.25rem/1.875rem proxima_novaregular;
-            letter-spacing: 0.0225rem;
-            color: #FFFFFF;
-            margin-bottom: 2rem;
-        }
-
-        .item-list {
-            ul {
-                li {
-                    border: none;
-                    margin-bottom: 1.5rem;
-                    display: flex;
-
-                    &.list-group-item::before {
-                        content: '';
-                        display: block;
-                        width: 10px;
-                        height: 10px;
-                        background-color: ##008767;
-                        border-radius: 50%;
-                        flex: none;
-                        margin: 0.5rem 0.6rem 0 0;
-                    }
-                }
-            }
-        }
-    }*/
-
-    .experiencia, .especialidades, .publicaciones {
-        h4 {
+.perfil-h4 {
             display: inline-block;
             background: #002E58;
             padding: 0.5rem 1.5rem;
@@ -2412,6 +2345,76 @@ footer {
             color: #FFFFFF;
             margin-bottom: 2rem;
         }
+#block-views-block-especialistas-block-1 {
+	.views-field-title{
+		color:#2e2e2e;
+	}
+    .views-field-field-titulo-profesional {
+        color: #002F87;
+        margin-bottom: 2.5rem;
+    }
+	.views-field-nothing{
+		position:relative;
+		.cuadro{
+			content: "";
+			width: 140px;
+			height: 140px;
+			background: url("../images/top-right-dots.svg");
+			background-size: cover;
+			display: block;
+			position: absolute;
+			top: -1.5em;
+			left: -1.5rem;
+			z-index: -1;
+			@include mobile{
+				display:none;
+			}
+		}
+		.fila-superior{
+			height:92vh;
+		
+			overflow:hidden;
+			@include mobile{
+				overflow:unset;
+				height:auto;
+			}
+
+		.texto {
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 2.5rem;
+			overflow-y: scroll;
+			height:46vh;
+			@include mobile{
+				overflow:unset;
+				height:auto;
+				}
+		}
+		.idiomas{
+		h4{
+			@extend .perfil-h4; 
+		}
+	}
+    .estudios {
+        h4{
+			@extend .perfil-h4;
+		}
+	
+	}
+		
+        .item-list {
+            ul {
+                li {
+                    border: none;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .especialidades {
+        h4{
+			@extend .perfil-h4;
+		}
 
         .item-list {
             ul {
@@ -2434,6 +2437,34 @@ footer {
             }
         }
     }
+
+    .experiencia, .publicaciones {
+       h4{
+			@extend	 .perfil-h4;
+		}
+
+        .item-list {
+            ul {
+                li {
+                    border: none;
+                    margin-bottom: 0.5rem;
+                    display: flex;
+
+                    &.list-group-item::before {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #008767;
+                        border-radius: 50%;
+                        flex: none;
+                        margin: 0.5rem 0.6rem 0 0;
+                    }
+                }
+            }
+        }
+    }
+	}
 }
 
 
@@ -2952,6 +2983,53 @@ footer {
 			padding-top: 1em;
 		}
 	}
+}
+
+
+/* PAGINATION 
+--------------------------------------------------*/
+.keralty-pagination {
+    display: flex;
+    list-style: none;
+
+    .page-item {
+        margin: 0 0.3rem;
+
+        .page-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #012E58;
+            border-radius: 30px !important;
+            width: 44px;
+            height: 44px;    
+            font: normal normal normal 20px/48px Hind;
+            color: #ffffff;
+especialistas
+            &.active, &:hover {
+                background-color: #008767;
+            }
+        }
+    }
+
+    .page-item-ext {
+        &.elipsis {
+            .page-link {
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .page-link {
+            width: 25px;
+            background-color: transparent;
+            color: #012E58;
+
+            &.active, &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
 }
 
 /* MENU RESALTADO
