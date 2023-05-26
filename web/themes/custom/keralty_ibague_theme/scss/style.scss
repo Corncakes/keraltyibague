@@ -390,7 +390,7 @@ p {
                 width: 100%;
                 height: auto;
 				@include mobile{
-					height:100% !important;
+					height:480px !important;
 					width:auto !important;
 					max-width:none;
 					
@@ -478,16 +478,22 @@ p {
         border-radius: 25px;
         line-height: 1;
 		@include mobile{
-			left: 30%;
+			left: 35%;
+			width:30%;
 		}
         button {
+			position:relative;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             border: 0;
             background: #ffffff;
             margin: 0 0.5rem !important;
-
+			@include mobile{
+				width: 15px;
+				height: 15px;
+				margin: 0 0.35rem !important;
+			}
             &:first-child {
                 margin-right: 0.5rem;
             }
@@ -496,6 +502,31 @@ p {
             }
             &.tns-nav-active {
                 background: #457aa5;
+				width: 16px;
+				height: 16px;
+				position: relative;
+				top: 4px;
+				left: 0px;
+				@include mobile{
+					width: 11px;
+					height: 11px;
+					&:after{
+						width: 15px !important;
+						height: 15px !important;
+						left:-7px !important;
+					}
+				}
+				&:after{
+					content:"";
+					display:block;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					border:1px solid #457aa5;
+					position: relative;
+					top: -3px;
+					left: -8px;
+				}
             }
         }
     }
@@ -2950,7 +2981,7 @@ footer {
 	}
 }
 .info404{
-    top: 0%;
+    top: 9em;
     padding-left: 3em;
     display: flex;
     flex-direction: column;
