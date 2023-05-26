@@ -2537,7 +2537,7 @@ footer {
 /* VIEWS DETALLE DE SERVICIO
 --------------------------------------------------*/
 #block-views-block-especialistas-block-2{
-	.view-display-id-block_2 {
+
 		margin: 4rem 1rem;
 		@include mobile{
 			margin:1em 0em;
@@ -2581,9 +2581,17 @@ footer {
 			letter-spacing: 0px;
 			color: #000000;
 		}
-	}
 
 }
+
+#block-views-block-especialistas-block-3{
+	@extend #block-views-block-especialistas-block-2;
+}
+
+.view-display-id-page_1{
+	@extend #block-views-block-especialistas-block-2;
+}
+
 /* BOTTOM FOOTER
 --------------------------------------------------*/
 
