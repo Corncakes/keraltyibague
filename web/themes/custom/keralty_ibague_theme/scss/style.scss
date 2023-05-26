@@ -973,7 +973,7 @@ p {
 		background-color:#fff;
 		.view-header{
 			@extend .container;
-			
+			padding:4em 1em 1em 1em;
 			color:#002D57;
 			.search-term{
 				font-weight:bolder;
