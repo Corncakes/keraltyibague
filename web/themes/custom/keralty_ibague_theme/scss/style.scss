@@ -2799,7 +2799,10 @@ block-views-block-especialistas-block-2{
             margin-bottom: 2rem;
             padding-bottom: 2rem;
 			text-align:center;
-            
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
 			.icono{
 				color:#000066;
 				font: normal normal bold 36px/40px proxima_novaregular;
@@ -2812,6 +2815,7 @@ block-views-block-especialistas-block-2{
                 color: #1E3D7B;
                 padding: 1rem;
 				font-size:1.5em;
+				height:84px;
 
                 a {
                     color: #1E3D7B;
@@ -2828,7 +2832,6 @@ block-views-block-especialistas-block-2{
                         border-radius: 25px;
                         padding: 0.7rem 2rem;
                         line-height: 1;
-                        margin: 1rem 1rem 1.2rem 1rem;
                         display: inline-block;
                         color: #fff;
                         font-weight: 500;
@@ -2917,9 +2920,10 @@ block-views-block-especialistas-block-2{
 	@extend .mx-md-3;
 	.info{
 		.direccion{
-			font-size:0.875em;
+			font-size:16px;
 			color:#1E3D7B;
 			padding:0 1em;
+			height:55px;
 		}
 	}
 	img{
@@ -2931,6 +2935,7 @@ block-views-block-especialistas-block-2{
 
 #sede{
 	.titulo{
+		
 		.field--name-field-ciudad{
 			display:contents;
 		}
@@ -3173,6 +3178,7 @@ block-views-block-especialistas-block-2{
 .page-node-167{
 	#block-keralty-ibague-theme-content { 
 		article {
+			padding-bottom:2em;
 			.field--name-field-elementos-de-texto{
 				justify-content:flex-start !important;
 				
