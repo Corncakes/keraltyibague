@@ -543,6 +543,9 @@ p {
 			border-radius:50%;
 			transition:all 0.5s ease-out;
 			color:white;
+			align-items: center;
+			justify-content: center;
+			display: flex;
 			&:hover {
 						background: #2cbe9e;
 						color:#2c5275;
@@ -1070,6 +1073,9 @@ p {
 				border-radius:50%;
 				transition:all 0.5s ease-out;
 				color:white;
+				align-items: center;
+				justify-content: center;
+				display: flex;
 				&:hover {
 						background: #2cbe9e;
 						color:#2c5275;
@@ -1932,6 +1938,9 @@ footer {
 				transition:all 0.5s ease-out;
 				color:#2c5275;
 				font-weight:bolder;
+				align-items: center;
+				justify-content: center;
+				display: flex;
 				&:hover {
 						background: #008767;
 						color:#fff;
@@ -2524,7 +2533,7 @@ footer {
 
 /* VIEWS DETALLE DE SERVICIO
 --------------------------------------------------*/
-
+block-views-block-especialistas-block-2{
 	.view-display-id-block_2 {
 		margin: 4rem 1rem;
 		@include mobile{
@@ -2571,7 +2580,7 @@ footer {
 		}
 	}
 
-
+}
 /* BOTTOM FOOTER
 --------------------------------------------------*/
 
