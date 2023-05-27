@@ -1059,12 +1059,11 @@ p {
 #block-views-block-noticias-block-1 {
 	position:relative;
 	#tns2-ow {
-		
 		.tns-nav{
 			display:none;
 		}
 		.tns-controls{
-			
+		
 			button {
 				background-color: #008767;
 				border: none;
@@ -1080,7 +1079,7 @@ p {
 						background: #2cbe9e;
 						color:#2c5275;
 					}
-	
+
 				&:first-child {
 					position: absolute;
 					left: 10px;
@@ -1096,19 +1095,22 @@ p {
 			}
 		}
 	}
-    .titulo {
-        font: normal normal bold 36px/58px proxima_novaregular;
-        letter-spacing: 0.54px;
-        color: #002F87;
-    }
+	#tns2{
+		li{
+			list-style-type:none;
+			
+		.titulo {
+			font: normal normal bold 36px/58px proxima_novaregular;
+			letter-spacing: 0.54px;
+			color: #002F87;
+		}
 
-    .views-field-nothing {
-        display: flex;
-        height: 100%;
-    }
-	li{
-		list-style-type:none;
+		.views-field-nothing {
+			display: flex;
+			height: 100%;
+		}
 	}
+}
 }
 
 

@@ -23,7 +23,7 @@
 	  /*Slideshow de especialidades quirurgicas en detalle de especialidades quirurgicas*/
 	   if (document.querySelector('.node--type-especialidad')){
 	  var slider_services = tne({ 
-			container: '.view-especialidades-quirurgicas .especialidades-wrap',
+			container: '.view-especialidades-dquirurgicas .especialidades-wrap',
 			mode: 'carousel',
 			"mouseDrag": true,
 			controlsText: ['<i class="fa-solid fa-angle-left"></i>','<i class="fa-solid fa-angle-right"></i>'],
@@ -55,7 +55,8 @@
 			responsive: {
                 376: {
 					controls:false,
-                    gutter:-10,
+                    gutter:10,
+					edgePadding:40,
                     items: 2
                 },
 			    768: {
@@ -87,9 +88,11 @@
 			controlsText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
 			responsive: {
                 376: {
-					controls:true,
-                    gutter:-10,
-                    items: 1
+					controls:false,
+                    gutter:10,
+					edgePadding:40,
+                    items: 1,
+					center:true
                 },
 			    768: {
 					controls:false,
