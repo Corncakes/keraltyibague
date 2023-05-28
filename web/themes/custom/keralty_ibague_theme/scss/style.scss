@@ -1920,20 +1920,20 @@ footer {
     height: 100%;
 }
 	#tns2-iw {
-    margin: 0px auto;
-    width:70%;
-	@include mobile{
-		width:90%;
-	}
-    overflow: hidden;
+		margin: 0px auto;
+		width:70%;
+		@include mobile{
+			width:90%;
+		}
+		overflow: hidden;
 	}
 	#tns1-iw {
-    margin: 0px auto;
-    width:70%;
-	@include mobile{
-		width:90%;
-	}
-    overflow: hidden;
+		margin: 0px auto;
+		width:70%;
+		@include mobile{
+			width:90%;
+		}
+		overflow: hidden;
 	}
 		position:relative;
 		.tns-nav{
@@ -2087,6 +2087,13 @@ footer {
 		}
     }
 }
+#block-views-block-especialistas-block-2{
+	
+	#tns1-ow {
+		@extend .slideshow-controls
+	}
+}
+
 
 #block-views-block-especialidades-quirurgicas-block-2{
 	.especialidades{

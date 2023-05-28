@@ -51,7 +51,7 @@
 	   var pageservicio=document.querySelector('.node--type-servicio');
 	   console.log(pageespecialidad || pageservicio);
 	   if ( pageespecialidad || pageservicio){
-		   if(document.querySelector('.view-especialistas')){
+		   if(document.querySelector('.especialistas-wrap')){
 				var slider_services = tnesp({ 
 					container: '.view-especialistas .especialistas-wrap',
 					mode: 'carousel',
@@ -71,7 +71,7 @@
 						},
 					1024: {
 						controls:true,
-						items: 4,
+						items: 5,
 						center:true
 					}
 				}
