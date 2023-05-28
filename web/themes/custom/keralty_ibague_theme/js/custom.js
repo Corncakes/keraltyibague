@@ -30,7 +30,8 @@
 			responsive: {
                 376: {
 					controls:false,
-                    gutter:-10,
+                    gutter:10,
+					edgePadding:40,
                     items: 2
                 },
 			    768: {
