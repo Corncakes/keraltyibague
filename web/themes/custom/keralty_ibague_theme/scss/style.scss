@@ -195,14 +195,18 @@ p {
         flex-basis: initial; //Corregido para mobile
         padding-right: 4rem;
         img {
-            width: 100%;
+            width:137px !important;
+			height:41px !important;
         }
     }
 }
 
-header {
+#header {
     @include mobile{
         display: flex; //Corregido para mobile
+		justify-content: space-between;
+		width: 100vw !important;
+		background-color:#fff;
     }
 }
 
@@ -244,7 +248,7 @@ header {
 		@include mobile{
 			position: absolute;
 			left: -70vw;
-			top:5em;
+			top:4.5em;
 			width: 105vw;
 			background-color: white;
 			justify-content: start !important;
@@ -907,12 +911,16 @@ header {
 
 .search-toggle-container {
     display: none;
+	display: none;
+    position: absolute;
+    top: 3px;
+    right: 3px;
     & > div {
+        
         display: flex;
-        position: absolute;
-        display: flex;
+		/*position: absolute;
         right: 0;
-        top: 0.25rem;
+        top: 0.25rem;*/
         align-items: center;
         padding: 0.5rem 1.5rem;
         background-color: #ffffff;
@@ -949,10 +957,10 @@ header {
     @include mobile { //Corregido para mobile
         display: none;
         position: absolute;
-        bottom: -7rem;
+        bottom: -4.5rem;
         left: 0;
-        background-color: #ffffff;
-        padding: 2rem;
+        background-color:#fff;
+        padding:1rem 2rem;
         width: 102vw;
     }
     form {
@@ -3122,7 +3130,7 @@ footer {
 .dialog-off-canvas-main-canvas{
 	padding-top: 9.5em;
     @include mobile{
-		padding-top: 8.5em;
+		padding-top: 4.5em;
 	}
 }
 
