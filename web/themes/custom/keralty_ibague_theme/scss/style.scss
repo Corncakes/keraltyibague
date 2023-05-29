@@ -451,9 +451,12 @@ header {
         padding: 0.5rem;
         border-radius: 25px;
         line-height: 1;
+		display:flex;
+		align-items:center;
 		@include mobile{
 			left: 34%;
 			width:32%;
+			
 		}
         button {
 			position:relative;
@@ -463,10 +466,12 @@ header {
             border: 0;
             background: #ffffff;
             margin: 0 0.5rem !important;
+			flex:none;
 			@include mobile{
 				width: 16px;
 				height: 16px;
 				margin: 0 0.35rem !important;
+				
 			}
             &:first-child {
                 margin-right: 0.5rem;
@@ -479,7 +484,7 @@ header {
 				width: 16px;
 				height: 16px;
 				position: relative;
-				top: 4px;
+				top: 0px;
 				left: 0px;
 				@include mobile{
 					width: 12px;
