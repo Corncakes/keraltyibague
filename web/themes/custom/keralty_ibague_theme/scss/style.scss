@@ -191,6 +191,19 @@ p {
 .navbar-brand {
     flex-basis: 18%;
     margin: 0.4rem 0;
+    @include mobile {
+        flex-basis: initial; //Corregido para mobile
+        padding-right: 4rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+header {
+    @include mobile{
+        display: flex; //Corregido para mobile
+    }
 }
 
 
@@ -207,62 +220,22 @@ p {
 
 /* MAIN NAVBAR
 --------------------------------------------------*/
-#navbar-top{
-	@include mobile{
-		float:left;
-		width:85%;
-		height:4em;
-	}
-	#views-exposed-form-busqueda-page-1{
-		@include mobile{
-			position:absolute;
-			width:100vw;
-			background-color:white;
-			top:-0.6em;
-			left:-7vw;
-			padding:1em 4vw;
-			height:5.5em;
-		}
-		button{
-			&:after{
-				@include mobile{
-					top:0;
-					width:40px;
-					height:40px;
-					border-radius:50%;
-					background:url(../images/search2.svg);
-					background-size:cover;
-					top: -7.7em;
-					left: 16em;
-					
-				}
-			}
-		}
-	}
-	a {
-		img{
-			@include mobile{
-				max-width:none;
-				width:137px;
-			}
-		}
-	}
-}
-
 
 #navbar-main {
     padding-top: 0;
     background-color: #F5F5F5 !important;
 	@include mobile {
 		background-color: #fff !important;
-		position:absolute;
-		right:0em;
-		height:4em;
+		padding:0;
 	}
     .navbar-brand {
         max-width: 240px;
     }
-
+	& > .container {
+        @include mobile {
+            flex-wrap: nowrap;
+        }
+    }
 
     #CollapsingNavbar {
         //height: 90px;
@@ -270,11 +243,12 @@ p {
         justify-content: center !important;
 		@include mobile{
 			position: absolute;
-			left: -75vw;
-			top:4em;
-			width: 93vw;
+			left: -70vw;
+			top:5em;
+			width: 105vw;
 			background-color: white;
 			justify-content: start !important;
+			padding:2rem 3rem; 
 		}
         #block-keralty-ibague-theme-main-menu {
             height: 100%;
@@ -912,11 +886,70 @@ p {
 
 /* BUSCADOR
 --------------------------------------------------*/
+.search-toggle { //Corregido para mobile
+    display: none;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:url(../images/search2.svg);
+    background-size:cover;
+    margin-right: 1rem;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.search-toggle-container {
+    display: none;
+    & > div {
+        display: flex;
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 0.25rem;
+        align-items: center;
+        padding: 0.5rem 1.5rem;
+        background-color: #ffffff;
+        .search-toggle-active { //Corregido para mobile
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            background:url(../images/search4.svg);
+            background-size:cover;
+            margin-right: 1.9rem;
+            background-color: #000066;
+            flex: none;
+        }
+        .search-toggle-close {
+            color: #4E9D2D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0px;
+            font-size: 0.6rem;
+            line-height: 0.7;
+            .svg-inline--fa {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
 
 .form-buscar {
     flex-basis: 78%;
     position: relative;
-    
+    @include mobile { //Corregido para mobile
+        display: none;
+        position: absolute;
+        bottom: -7rem;
+        left: 0;
+        background-color: #ffffff;
+        padding: 2rem;
+        width: 102vw;
+    }
     form {
         .form-item-search-api-fulltext {
             margin-bottom: 0 !important;
@@ -941,9 +974,6 @@ p {
                 color: transparent;
                 border: none;
                 position: absolute;
-				@include mobile{
-					position:relative !important;
-				}
                 top: 1px;
                 right: 1px;
                 padding: 0.6rem 1rem;
@@ -969,6 +999,9 @@ p {
                 }
             }
         }
+		@include mobile{
+			position:relative;
+		}
     }
 }
 

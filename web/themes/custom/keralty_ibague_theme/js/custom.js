@@ -6,6 +6,26 @@
 (function($, Drupal) {
 
   var initialized;
+  // Seleccionar el botón y el elemento
+        var btn = document.getElementById('search-toggle');
+        var btnClose = document.getElementById('search-toggle-close');
+        var elemento = document.getElementById('block-formularioexpuestobusquedapage-1');
+        var elementoCerrar = document.getElementById('search-toggle-container');
+        // Agregar un evento de clic al botón
+        btn.addEventListener('click', function() {
+            // Cambiar el estilo de visualización del elemento a "block"
+            elemento.style.display = 'block';
+            btn.style.display = 'none';
+            elementoCerrar.style.display = 'block';
+        });
+
+        // Agregar un evento de clic al botón cerrar
+        btnClose.addEventListener('click', function() {
+            // Cambiar el estilo de visualización del elemento a "block"
+            elemento.style.display = 'none';
+            btn.style.display = 'block';
+            elementoCerrar.style.display = 'none';
+        });
 
   function init() {
     if (!initialized) {

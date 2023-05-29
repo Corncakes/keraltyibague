@@ -94,6 +94,13 @@
           {% endif %}
             {{ page.header }}
             {% if page.primary_menu or page.header_form %}
+			  <div class="search-toggle" id="search-toggle"></div>
+              <div class="search-toggle-container" id="search-toggle-container">
+                <div>
+                  <div class="search-toggle-active"></div>
+                  <div class="search-toggle-close" id="search-toggle-close"><i class="fa-solid fa-xmark"></i>Cerrar</div>
+                </div>
+              </div>
               <button class="navbar-toggler collapsed" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
               <div class="{{ navbar_collapse_class }}" id="CollapsingNavbar">
                 {% if navbar_offcanvas %}
