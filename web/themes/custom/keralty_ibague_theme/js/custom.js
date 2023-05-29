@@ -149,10 +149,12 @@
                 },
 			    768: {
 					controls:false,
-					items: 2
+					items: 2,
+					center:false
                 },
                 1024: {
-                    items: 4
+                    items: 4,
+					center:false
 				}
             }
 		});
