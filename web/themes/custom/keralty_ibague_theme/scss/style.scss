@@ -1107,9 +1107,13 @@ p {
 		.views-field-nothing {
 			display: flex;
 			height: 100%;
+			}
 		}
 	}
-}
+	#tns1{
+		@extend #tns2;
+	}
+
 }
 
 
