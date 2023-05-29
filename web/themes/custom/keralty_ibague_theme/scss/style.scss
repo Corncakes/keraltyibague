@@ -593,9 +593,10 @@ p {
         margin-top: 1.5rem;
 		video{
 			width:100% !important;
-			@include mobile{
+			height:auto;
+			/*@include mobile{
 				height:100%;
-			}
+			}*/
 		}
         &::before {
             content: '';

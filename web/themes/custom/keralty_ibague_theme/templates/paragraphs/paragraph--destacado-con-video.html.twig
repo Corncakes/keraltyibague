@@ -64,7 +64,11 @@
                     {{ content.field_texto_con_icono }}
                 {% endif %}
             </div>
-            <div class="col-sm-12 col-md-6 video">
+			 {% if content.field_texto_con_icono|render is not empty %}
+            <div class="col-12 col-md-6 video">
+			{% else %}
+			<div class="col-12 video">
+			{% endif %}
                 {% if content.field_video|render is not empty %}
                     {{ content.field_video.0 }}
                 {% endif %}
