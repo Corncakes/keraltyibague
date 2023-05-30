@@ -276,7 +276,52 @@ p {
 			flex-wrap: nowrap;
 		}
 	}
+	.navbar-toggler {
+        font-size: 0.6rem;
+        font-weight: 600;
+        border: none;
+        &:focus {
+            box-shadow: none;
+        }
 
+        .boton-open {
+            display: none;
+        }
+
+        .boton-close {
+            display: block;
+            color: #4E9D2D !important;
+            padding: 0 0.1rem;
+        }
+
+        .svg-inline--fa {
+            display: block;
+            width: 24px;
+            margin: 0;
+            font-size: 1.8rem;
+            color: #4E9D2D;
+        }
+        &.collapsed {
+            color: #002F87;
+
+            .main-menu-icon {
+                border-top: 3px solid #002F87;
+                border-bottom: 3px solid #002F87;
+                display: block;
+                width: 22px;
+                height: 10px;
+                margin: 0 auto 0.4rem auto;
+            }
+
+            .boton-open {
+                display: block;
+            }
+
+            .boton-close {
+                display: none;
+            }
+        }
+    }
 	#CollapsingNavbar {
 		//height: 90px;
 		position: relative;
@@ -1362,6 +1407,9 @@ p {
 			background-color: $primary;
 			border-radius: 25px;
 			padding: 0.7rem 2rem;
+			@include mobile{
+				padding: 0.5rem 1rem;
+			}
 			line-height: 1;
 			color: white;
 			/*display: inline-block;*/

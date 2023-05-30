@@ -101,7 +101,17 @@
                   <div class="search-toggle-close" id="search-toggle-close"><i class="fa-solid fa-xmark"></i>Cerrar</div>
                 </div>
               </div>
-              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			  
+              <button class="navbar-toggler collapsed" id="navbar-toggler" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="boton-open">
+                  <span class="main-menu-icon"></span>
+                  Menú
+                </div>
+                <div class="boton-close">
+                  <i class="fa-solid fa-xmark"></i>
+                  Salir
+                </div>
+              </button>
               <div class="{{ navbar_collapse_class }}" id="CollapsingNavbar">
                 {% if navbar_offcanvas %}
                   <div class="offcanvas-header">

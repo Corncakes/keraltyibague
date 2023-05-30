@@ -20,6 +20,7 @@
         var estaDesplegado = menu.classList.contains("show");
         if (estaDesplegado) {
             menu.classList.remove("show");
+			btnMenu.classList.add("collapsed");
         }
         // Cambiar el estilo de visualización del elemento a "block"
         elemento.style.display = 'block';
