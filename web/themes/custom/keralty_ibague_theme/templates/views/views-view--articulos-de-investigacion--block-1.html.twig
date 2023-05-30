@@ -39,8 +39,19 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+{% if exposed %}
+	<div class="d-lg-none d-block ai-filters">
+		<div class="reversed-triangle"></div>
+			<div class="d-lg-none my-2 d-block view-filters">
+				{{ exposed }}
+		</div>
+		
+		
+	</div>
+   {% endif %}
 <div{{ attributes.addClass(classes) }}>
-    <div class="triangle"></div>
+<div class="d-lg-none d-block reversed-triangle-white"></div>
+    <div class="triangle d-none d-lg-block"></div>
     <div class="articulos-investigacion py-5">
         <div class="container">
             {{ title_prefix }}
@@ -54,7 +65,7 @@
                 </div>
             {% endif %}
             {% if exposed %}
-                <div class="view-filters">
+                <div class="d-none d-lg-block view-filters">
                 {{ exposed }}
                 </div>
             {% endif %}

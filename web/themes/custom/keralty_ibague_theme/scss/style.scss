@@ -131,7 +131,10 @@ p {
 		background-size: 70px;
 	}
 }
-
+.triangle-white{
+	@extend .triangle;
+	filter:brightness(150%);
+}
 .reversed-triangle {
     height: 30px;
     width: 100%;
@@ -145,7 +148,10 @@ p {
 	}
 }
 
-
+.reversed-triangle-white{
+	@extend .reversed-triangle;
+	filter:brightness(150%);
+}
 
 .enlace-mas {
     text-align: center;
@@ -382,7 +388,9 @@ p {
                 width: 100%;
                 height: 100%;
                 background-image: linear-gradient(to right, rgba(0,46,88,1), rgba(0,0,0,0));
-				
+				&:focus-within{
+					left:0 !important;
+				}
                 .info {
                     display: flex;
                     align-items: center;
@@ -1312,8 +1320,7 @@ p {
 }
 
 .exposed-filter-keralty{
-	 margin: 3rem 0;
-	 
+	
 	& > div {
 		@extend .row;
 		label{
@@ -1363,34 +1370,52 @@ p {
         }
     }
 }
-#views-exposed-form-noticias-block-3 {
-   & > div {
-		.js-form-item-created{
-			@extend .exposed-input-date;
+#block-views-block-noticias-block-3{
+	
+	
+	.filters-news{
+		background-color:#f5f5f5;
+		padding:2em;
+		@include but-mobile{
+			padding: 3rem 10% 1em 10%;
 		}
-		.js-form-item-created-1{
-			@extend .exposed-input-date;
+		#views-exposed-form-noticias-block-3 {
+			& > div {
+				.js-form-item-created{
+					@extend .exposed-input-date;
+				}
+				.js-form-item-created-1{
+					@extend .exposed-input-date;
+				}
+			}
+			@extend .exposed-filter-keralty;
 		}
 	}
-	
-	@extend .exposed-filter-keralty;
-
 }
-#views-exposed-form-noticias-block-2 {
-   & > div {
-		.js-form-item-created{
-			@extend .exposed-input-date;
+
+#block-views-block-noticias-block-2{
+	.filters-news{
+		background-color:#f5f5f5;
+		padding:2em 2em 0 2em;
+		@include but-mobile{
+			padding: 3rem 10% 1em 10%;
 		}
-		.js-form-item-created-1{
-			@extend .exposed-input-date;
+		#views-exposed-form-noticias-block-2 {
+			& > div {
+				.js-form-item-created{
+					@extend .exposed-input-date;
+				}
+				.js-form-item-created-1{
+					@extend .exposed-input-date;
+				}
+			}
+			@extend .exposed-filter-keralty;
 		}
 	}
-	
-	@extend .exposed-filter-keralty;
-
 }
 
 #views-exposed-form-articulos-de-investigacion-block-1{
+	 padding: 1rem 0 2rem 0;
 	& > div {
 		.js-form-item-field-fecha__value{
 			@extend .exposed-input-date;		
@@ -1402,12 +1427,7 @@ p {
 
 	@extend .exposed-filter-keralty;
 }
-#block-views-block-noticias-block-3 {
-    .view-noticias {
-		background-color:#f5f5f5;
-        /*background-image: linear-gradient(to bottom, rgb(219, 219, 219), rgba(245,245,245));*/
-    }
-}
+
 
 
 /* FOOTER
@@ -1795,6 +1815,13 @@ footer {
 				font-weight:100 !important;
 				height:100% !important;
 			}
+			@include mobile{
+				width: 50%;
+				height: 2.5rem;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
         }
 		&::before{
 			display: flex;
@@ -2174,15 +2201,19 @@ footer {
 
 /* VIEWS ARTICULOS DE INVESTIGACION
 --------------------------------------------------*/
-
+.ai-filters{
+	background-color:white;
+}
 #block-views-block-articulos-de-investigacion-block-1 {
+	.contextual-region{
+		@include mobile{
+	background-color:#f5f5f5;}
+	}
     margin-top: 3rem;
     .articulos-investigacion {
 		
 		background-color:#f5f5f5;
-		@include mobile{
-			background-color:white;
-		}
+		
         /*background-image: linear-gradient(to bottom, rgb(219, 219, 219), rgba(245,245,245));*/
 
         .view-header {
@@ -2372,6 +2403,9 @@ footer {
             top: -1.5rem;
             right: -1rem;
             z-index: -1;
+			@include mobile{
+				display:none;
+			}
         }
 
         img {
@@ -2517,25 +2551,28 @@ footer {
 			}
 		}
 		.fila-superior{
-			height:92vh;
+			/*height:92vh;
 		
 			overflow:hidden;
 			@include mobile{
 				overflow:unset;
 				height:auto;
-			}
+			}*/
 
 		.texto {
 			border-bottom: 1px solid #ddd;
 			margin-bottom: 2.5rem;
-			overflow-y: scroll;
+			/*overflow-y: scroll;
 			height:46vh;
 			@include mobile{
 				overflow:unset;
 				height:auto;
-				}
+				}*/
 		}
-		.idiomas{
+		
+	
+	}
+	.idiomas{
 		h4{
 			@extend .perfil-h4; 
 		}
@@ -2544,9 +2581,6 @@ footer {
         h4{
 			@extend .perfil-h4;
 		}
-	
-	}
-		
         .item-list {
             ul {
                 li {
@@ -3149,7 +3183,7 @@ footer {
 		z-index: 501;
 	}
 	.dialog-off-canvas-main-canvas{
-		padding-top: 4.5em;
+		padding-top: 7em;
 		@include mobile{
 			padding-top: 1em;
 		}

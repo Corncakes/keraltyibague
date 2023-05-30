@@ -6,6 +6,9 @@
 (function($, Drupal) {
 
   var initialized;
+  var slider1;
+  var slider2;
+
   // Seleccionar el botón y el elemento
         var btn = document.getElementById('search-toggle');
         var btnClose = document.getElementById('search-toggle-close');
@@ -43,7 +46,7 @@
 	  
 	  /*Slideshow de especialidades quirurgicas en detalle de especialidades quirurgicas*/
 	   if (document.querySelector('.node--type-especialidad')){
-	  var slider_services = tne({ 
+	   slider1 = tns1({ 
 			container: '.view-especialidades-quirurgicas .especialidades-wrap',
 			mode: 'carousel',
 			"mouseDrag": true,
@@ -69,16 +72,16 @@
 	   /*Slideshow de especialidades quirurgicas en detalle de especialidades quirurgicas*/
 	   var pageespecialidad=document.querySelector('.node--type-especialidad');
 	   var pageservicio=document.querySelector('.node--type-servicio');
-	   console.log(pageespecialidad || pageservicio);
+	  
 	   if ( pageespecialidad || pageservicio){
 		   if(document.querySelector('.especialistas-wrap')){
-				var slider_services = tnesp({ 
+				slider2 = tns2({ 
 					container: '.view-especialistas .especialistas-wrap',
 					mode: 'carousel',
 					"mouseDrag": true,
 					controlsText: ['<i class="fa-solid fa-angle-left"></i>','<i class="fa-solid fa-angle-right"></i>'],
 					responsive: {
-					376: {
+					0: {
 						controls:false,
 						gutter:10,
 						edgePadding:40,
@@ -100,14 +103,16 @@
 		}
 	  /*Slideshow de servicios en detalle de servicios*/
 	    if (document.querySelector('.node--type-servicio')){
-	  var slider_services = tnsv({ 
+			 
+	  slider1 = tns1({ 
 			container: '.view-servicios .servicios-wrap',
 			mode: 'carousel',
 			"mouseDrag": true,
 			controlsText: ['<i class="fa-solid fa-angle-left"></i>','<i class="fa-solid fa-angle-right"></i>'],
 			responsive: {
-                376: {
+                100: {
 					controls:false,
+					nav:false,
                     gutter:10,
 					edgePadding:40,
                     items: 2
@@ -124,9 +129,38 @@
 		});
 		}
 		
+		if (document.querySelector('.node--type-article')){
+	
+		slider1 = tns1({ 
+			
+			mode: 'carousel',
+			container: '.noticias-slide',
+			"mouseDrag": true,
+			controlsText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+			responsive: {
+                0: {
+					controls:false,
+					nav:false,
+                    gutter:10,
+					edgePadding:40,
+                    items: 1,
+					center:true
+                },
+			    768: {
+					controls:false,
+					items: 2,
+					center:false
+                },
+                1024: {
+                    items: 4,
+					center:false
+				}
+            }
+		});
+	}
 	  /*Slideshow de noticias en el banner del home*/
       if (document.querySelector('.page-node-1')){
-		var slider = tns({ 
+		slider1 = tns1({ 
 			container: '.view-slider .view-content.row',
 			mode: 'carousel',
 			controlsPosition: 'bottom',
@@ -134,14 +168,15 @@
 			"mouseDrag": true,
 			controlsText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
 		});
-		var slider_news = tnn({ 
+		slider2 = tns2({ 
 			container: '.view-noticias .news-wrap',
 			mode: 'carousel',
 			"mouseDrag": true,
 			controlsText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
 			responsive: {
-                376: {
+                0: {
 					controls:false,
+					nav:false,
                     gutter:10,
 					edgePadding:40,
                     items: 1,
