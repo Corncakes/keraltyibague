@@ -2805,6 +2805,14 @@ footer {
                 border: none;
                 box-shadow: none;
 				
+				&:focus-visible{
+					@include but-mobile{
+						border:2px #aaa solid;
+						border-radius:25px;
+					}
+
+				}
+				
 				&:after{
 					margin-left: auto;
 					content: "+";
@@ -2818,6 +2826,8 @@ footer {
                 &:not(.collapsed) {
                     color: #333;
 					font-weight:800;
+					border:none;
+					border-radius:0;
 					&:after{
 						content: "-";
 						font-weight: 900;
