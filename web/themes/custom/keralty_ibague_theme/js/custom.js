@@ -214,7 +214,84 @@ for (i = 0; i < acc.length; i++) {
 }
     }
   }
+/*busqueda de texto en la página*/
 
+	if (document.querySelector('.page-view-busqueda') || document.querySelector('.page-node-6')){
+		
+		var container;
+		var search;
+		if (document.querySelector('.page-view-busqueda')){
+			container = document.getElementById("content");
+		}
+		if (document.querySelector('.page-node-6')){
+			container = document.getElementById("block-views-block-articulos-de-investigacion-block-1");
+		}
+		
+				function forEach(node, callback) {
+					Array.prototype.forEach.call(node.childNodes, callback);
+				}
+
+				function searchText(container, search) {
+
+					var total = 0;
+					var reg = new RegExp("(" + search + ")", "gi");
+
+					var cleanAllSearchSpans = function (parentNode) {
+						forEach(parentNode, function (node) {
+							if (node.nodeType === 1) {
+								if (
+									node.nodeName === "SPAN" &&
+									node.dataset.search === "true"
+								) {
+									parentNode.replaceChild(
+										document.createTextNode(node.innerText),
+										node
+									);
+								} else {
+									cleanAllSearchSpans(node);
+								}
+							}
+						});
+					};
+
+					var highlightSearchInNode = function (parentNode, search) {
+						forEach(parentNode, function (node) {
+							if (node.nodeType === 1) {
+								highlightSearchInNode(node, search);
+							} else if (
+								node.nodeType === 3 &&
+								reg.test(node.nodeValue)
+							) {
+								var matches = node.nodeValue.match(reg);
+								var span = document.createElement("span");
+								span.dataset.search = "true";
+								span.innerHTML = node.nodeValue.replace(reg, "<mark>$1</mark>");
+								parentNode.replaceChild(span, node);
+								total += matches.length;
+							}
+						});
+					};
+
+					cleanAllSearchSpans(container);
+					container.normalize();
+					highlightSearchInNode(container, search);
+
+					return total;
+
+				}
+
+				if (document.querySelector('.page-view-busqueda')){
+					search = document.getElementById("edit-search-api-fulltext--2").value;
+				}
+				if (document.querySelector('.page-node-6')){
+					search = document.getElementById("edit-title").value;
+				}
+					
+				if(search.length == 0) return;
+				var finded = searchText(container, search);
+	}
+
+/*fin de búsqueda de texto en la página*/
   Drupal.behaviors.keralty_ibague_theme = {
     attach: function(context, settings) {
       init();
