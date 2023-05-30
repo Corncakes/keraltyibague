@@ -2701,9 +2701,11 @@ footer {
 #block-views-block-especialistas-block-3{
 	@extend #block-views-block-especialistas-block-2;
 }
-
-.view-display-id-page_1{
+.page-view-especialistas{
+	.view-display-id-page_1{
+	margin:3em auto;
 	@extend #block-views-block-especialistas-block-2;
+	}
 }
 
 /* BOTTOM FOOTER
