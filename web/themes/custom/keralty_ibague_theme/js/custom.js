@@ -35,6 +35,24 @@
         btn.style.display = 'block';
         elementoCerrar.style.display = 'none';
     });
+	/***********************************/
+	
+	if(document.querySelector('#views-exposed-form-articulos-de-investigacion-block-1')){
+		var input= document.getElementById('edit-field-fecha-value');
+		input.setAttribute('inputmode','numeric');
+		input= document.getElementById('edit-field-fecha-value');
+		input.setAttribute('inputmode','numeric');
+		console.log(input);
+	}
+	
+	if(document.querySelector('#views-exposed-form-noticias-block-2')){
+		var input= document.getElementById('edit-created');
+		input.setAttribute('inputmode','numeric');
+		input= document.getElementById('edit-created-1');
+		input.setAttribute('inputmode','numeric');
+		console.log(input);
+	}
+	/***********************************/
 
     function init() {
         if (!initialized) {
@@ -75,6 +93,7 @@
                     }
                 });
             }
+			
             /*Slideshow de especialidades quirurgicas en detalle de especialidades quirurgicas*/
             var pageespecialidad = document.querySelector('.node--type-especialidad');
             var pageservicio = document.querySelector('.node--type-servicio');
