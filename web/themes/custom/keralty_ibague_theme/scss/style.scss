@@ -23,10 +23,7 @@ font-family: 'proxima_novaregular';
 
 body {
 	background: $white;
-
-	@include mobile {
-		font-size: 14px !important;
-	}
+	font-size:16px !important;
 }
 
 h1,
@@ -213,10 +210,6 @@ p {
 	background: #00615C url(../images/arrow.svg) center center;
 	background-repeat: no-repeat;
 	border-radius: 50%;
-
-	@include mobile {
-		bottom: 54px !important;
-	}
 }
 
 .navbar-brand {
@@ -253,12 +246,7 @@ p {
 	right: 0;
 	z-index: 9;
 }
-.container{
-	@include mobile{
-		padding-right: calc(var(--bs-gutter-x) * 0.8);
-		padding-left: calc(var(--bs-gutter-x) * 0.8);
-	}
-}
+
 
 /* MAIN NAVBAR
 --------------------------------------------------*/
@@ -1734,6 +1722,8 @@ footer {
 				width: auto;
 				height: 180px;
 				max-width: none;
+				position: relative;
+				right: 100%;
 			}
 		}
 	}
@@ -1792,6 +1782,8 @@ footer {
 					width: auto;
 					height: 180px;
 					max-width: none;
+					position: relative;
+					right: 100%;
 				}
 			}
 		}
@@ -2141,6 +2133,9 @@ footer {
 		justify-content: center;
 
 		.field-content {
+			@include mobile {
+				width:100%;
+				}
 			a {
 				background-color: #0373A4;
 				border-radius: 25px;
@@ -2152,6 +2147,9 @@ footer {
 				@include mobile {
 					padding: 1rem 1.5rem;
 					font-size: 14px;
+					margin: 0 5% 1rem  5%;
+					width:90%;
+					text-align:center;
 				}
 
 				&:hover {
@@ -2524,7 +2522,7 @@ footer {
 							@include mobile {
 								flex-direction: row;
 								margin: 1em auto;
-								height: auto;
+								height: 95%;
 							}
 
 							.icono {
@@ -3088,7 +3086,8 @@ footer {
 		flex-wrap: wrap;
 		flex-direction: row;
 		padding-bottom: 2em;
-
+		align-items:baseline;
+		
 		p {
 			font: normal normal bold 13px/24px Hind !important;
 			letter-spacing: 0.2px !important;
@@ -3281,7 +3280,10 @@ footer {
 		padding: 1rem;
 		font-size: 1.5em;
 		height: 84px;
-
+		text-transform:uppercase;
+		@include mobile{
+			font-size:14px;
+		}
 		a {
 			color: #1E3D7B;
 		}
