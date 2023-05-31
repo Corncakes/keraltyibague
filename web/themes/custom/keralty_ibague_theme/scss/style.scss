@@ -34,7 +34,14 @@ h5,
 h6 {
 	color: #1E3D7B;
 }
-
+.views-element-container{
+	h2{
+		font-size: 18px !important;
+	}
+	.subtitulo{
+		font-size: 16px !important;
+	}
+}
 h2 {
 	font: normal normal bold 36px/58px proxima_novaregular !important;
 	letter-spacing: 0.54px;
@@ -2111,7 +2118,7 @@ footer {
 				a {
 					font: normal normal bold 15px/18px proxima_novaregular;
 					color: $white;
-					background-color: $primary;
+					background-color: #0071A3;
 					border-radius: 25px;
 					padding: 0.7rem 2rem;
 					line-height: 1;
@@ -2121,7 +2128,7 @@ footer {
 					&:hover {
 						text-decoration: none;
 						color: $white;
-						background: #00615C;
+						background-color: #002E58;
 					}
 				}
 			}
