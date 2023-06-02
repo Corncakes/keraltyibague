@@ -46,6 +46,7 @@ h6 {
 		}
 	}
 }
+
 h2 {
 	font: normal normal bold 36px/58px proxima_novaregular !important;
 	letter-spacing: 0.54px;
@@ -68,6 +69,17 @@ h4 {
 	justify-content: center;
 }
 
+
+.item-list{
+	ul{
+		li{
+			@include mobile{
+				margin: 0;
+				padding: 0.5rem;
+			}
+		}
+	}
+}
 /* COLORS 
 --------------------------------------------------*/
 
@@ -1858,6 +1870,9 @@ footer {
 
 .cuerpo-principal {
 	margin-bottom: 3rem !important;
+	@include mobile{
+		margin-bottom: 0rem !important;
+	}
 }
 
 
@@ -2426,6 +2441,14 @@ footer {
 					background: #2e7300;
 
 				}
+				@include mobile {
+					padding: 1rem 1.5rem;
+					font-size: 14px;
+					margin: 0 5% 1rem  5%;
+					width:90%;
+					text-align:center;
+				}
+				
 			}
 		}
 	}
@@ -3543,7 +3566,19 @@ footer {
 }
 
 /*temp*/
-
+.page-node-2{
+	#block-keralty-ibague-theme-content{ 
+		article{ 
+			.field--name-field-elementos{
+				div:nth-child(1) > div > div > div > div > div:nth-child(1) > img{
+					@include mobile{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}
 .dialog-off-canvas-main-canvas {
 	padding-top: 9.5em;
 
