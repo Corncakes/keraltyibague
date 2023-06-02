@@ -2428,6 +2428,9 @@ footer {
 		justify-content: center;
 
 		.field-content {
+			@include mobile {
+				width:100%;
+				}
 			a {
 				background-color: #008767;
 				border-radius: 25px;
