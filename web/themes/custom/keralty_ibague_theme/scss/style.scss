@@ -320,7 +320,7 @@ p {
         }
         &.collapsed {
             color: #002F87;
-
+			font-size:12px;
             .main-menu-icon {
                 border-top: 3px solid #002F87;
                 border-bottom: 3px solid #002F87;
@@ -329,7 +329,7 @@ p {
                 height: 10px;
                 margin: 0 auto 0.4rem auto;
             }
-
+			
             .boton-open {
                 display: block;
             }
@@ -346,12 +346,13 @@ p {
 
 		@include mobile {
 			position: absolute;
-			left: -70vw;
+			left: -73vw;
 			top: 4em;
-			width: 105vw;
+			width: 109vw;
 			background-color: white;
 			justify-content: start !important;
-			padding: 2rem 3rem;
+			padding: 2rem 2.5rem;
+			box-shadow: 0px 3px 6px #7575754D;
 		}
 
 		#block-keralty-ibague-theme-main-menu {
@@ -1239,8 +1240,6 @@ p {
 
 		.busqueda-card {
 			background-color: #fff;
-			-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.79);
-			-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.79);
 			box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.79);
 			margin: 1em 0;
 			display: flex;
@@ -1310,14 +1309,14 @@ p {
 				&:first-child {
 					position: absolute;
 					left: 10px;
-					top: 45%;
+					top: 33%;
 					z-index: 2;
 				}
 
 				&:last-child {
 					position: absolute;
 					right: 10px;
-					top: 45%;
+					top: 33%;
 					z-index: 2;
 				}
 			}
@@ -2069,7 +2068,7 @@ footer {
 			}
 
 			@include mobile {
-				width: 50%;
+				width: 41%;
 				height: 2.5rem;
 				text-overflow: ellipsis;
 				overflow: hidden;
@@ -2322,7 +2321,7 @@ footer {
 			&:first-child {
 				position: absolute;
 				left: 90px;
-				top: 45%;
+				top: 33%;
 				z-index: 2;
 
 			}
@@ -2330,7 +2329,7 @@ footer {
 			&:last-child {
 				position: absolute;
 				right: 90px;
-				top: 45%;
+				top: 33%;
 				z-index: 2;
 
 			}
@@ -2428,18 +2427,17 @@ footer {
 		justify-content: center;
 
 		.field-content {
-			@include mobile {
-				width:100%;
-				}
+			width:100%;
 			a {
 				background-color: #008767;
 				border-radius: 25px;
-				padding: 0.7rem 2rem;
+				padding: 0.7rem 1rem;
 				line-height: 1;
-				margin: 0rem 1rem 1.2rem 1rem;
 				display: inline-block;
 				color: #ffffff;
-
+				margin: 0 10% 1rem  10%;
+				width:80%;
+				text-align:center;
 				&:hover {
 					background: #2e7300;
 
@@ -2449,7 +2447,6 @@ footer {
 					font-size: 14px;
 					margin: 0 5% 1rem  5%;
 					width:90%;
-					text-align:center;
 				}
 				
 			}
@@ -3332,6 +3329,7 @@ footer {
 		text-transform:uppercase;
 		@include mobile{
 			font-size:14px;
+			height:auto !important;
 		}
 		a {
 			color: #1E3D7B;
@@ -3459,7 +3457,10 @@ footer {
 
 #sede {
 	.titulo {
-
+		
+		@include mobile{
+			padding:0 2rem;
+		}
 		.field--name-field-ciudad {
 			display: contents;
 		}
