@@ -35,24 +35,7 @@
         btn.style.display = 'block';
         elementoCerrar.style.display = 'none';
     });
-	/***********************************/
 	
-	if(document.querySelector('#views-exposed-form-articulos-de-investigacion-block-1')){
-		var input= document.getElementById('edit-field-fecha-value');
-		input.setAttribute('inputmode','numeric');
-		input= document.getElementById('edit-field-fecha-value');
-		input.setAttribute('inputmode','numeric');
-		console.log(input);
-	}
-	
-	if(document.querySelector('#views-exposed-form-noticias-block-2')){
-		var input= document.getElementById('edit-created');
-		input.setAttribute('inputmode','numeric');
-		input= document.getElementById('edit-created-1');
-		input.setAttribute('inputmode','numeric');
-		console.log(input);
-	}
-	/***********************************/
 
     function init() {
         if (!initialized) {
@@ -70,16 +53,16 @@
 
             /*Slideshow de especialidades quirurgicas en detalle de especialidades quirurgicas*/
             if (document.querySelector('.node--type-especialidad')) {
-                slider1 = tns1({
+                slider1 = tns({
                     container: '.view-especialidades-quirurgicas .especialidades-wrap',
                     mode: 'carousel',
                     "mouseDrag": true,
                     controlsText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
                     responsive: {
-                        376: {
+                        0: {
                             controls: false,
-                            gutter: 10,
-                            edgePadding: 40,
+                            gutter: 0,
+                            edgePadding: 80,
                             items: 2
                         },
                         768: {
@@ -93,17 +76,46 @@
                     }
                 });
             }
-			
+			/*Slideshow de servicios en detalle de servicios*/
+            if (document.querySelector('.node--type-servicio')) {
+
+                slider1 = tns({
+                    container: '.view-servicios .servicios-wrap',
+                    mode: 'carousel',
+                    "mouseDrag": true,
+                    controlsText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+                    responsive: {
+                        0: {
+                            controls: false,
+                            nav: false,
+                            gutter:10,
+                            edgePadding: 40,
+                            items: 2
+                        },
+                        768: {
+							gutter:10,
+                            controls: false,
+                            edgePadding: 40,
+							items: 2
+                        },
+                        1024: {
+                            controls: true,
+                            items: 4
+                        }
+                    }
+                });
+            }
             /*Slideshow de especialidades quirurgicas en detalle de especialidades quirurgicas*/
             var pageespecialidad = document.querySelector('.node--type-especialidad');
             var pageservicio = document.querySelector('.node--type-servicio');
 
             if (pageespecialidad || pageservicio) {
                 if (document.querySelector('.especialistas-wrap')) {
-                    slider2 = tns2({
+                    slider2 = tns({
                         container: '.view-especialistas .especialistas-wrap',
                         mode: 'carousel',
                         "mouseDrag": true,
+						loop:false,
                         controlsText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
                         responsive: {
                             0: {
@@ -115,48 +127,24 @@
                             768: {
                                 controls: false,
                                 items: 2,
+								fixedWidth: 240,
                                 center: true
                             },
                             1024: {
                                 controls: true,
                                 items: 5,
+								fixedWidth: 240,
                                 center: true
                             }
                         }
                     });
                 }
             }
-            /*Slideshow de servicios en detalle de servicios*/
-            if (document.querySelector('.node--type-servicio')) {
-
-                slider1 = tns1({
-                    container: '.view-servicios .servicios-wrap',
-                    mode: 'carousel',
-                    "mouseDrag": true,
-                    controlsText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
-                    responsive: {
-                        100: {
-                            controls: false,
-                            nav: false,
-                            gutter: 10,
-                            edgePadding: 40,
-                            items: 2
-                        },
-                        768: {
-                            controls: false,
-                            items: 2
-                        },
-                        1024: {
-                            controls: true,
-                            items: 4
-                        }
-                    }
-                });
-            }
+            
 
             if (document.querySelector('.node--type-article')) {
 
-                slider1 = tns1({
+                slider1 = tns({
 
                     mode: 'carousel',
                     container: '.noticias-slide',
@@ -166,7 +154,7 @@
                         0: {
                             controls: false,
                             nav: false,
-                            gutter: 10,
+                            gutter: -40,
                             edgePadding: 40,
                             items: 1,
                             center: true
@@ -185,7 +173,7 @@
             }
             /*Slideshow de noticias en el banner del home*/
             if (document.querySelector('.page-node-1')) {
-					slider1 = tns1({
+					slider1 = tns({
                     container: '.view-slider .view-content.row',
                     mode: 'carousel',
                     controlsPosition: 'bottom',
@@ -193,7 +181,7 @@
                     "mouseDrag": true,
                     controlsText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
                 });
-                slider2 = tns2({
+                slider2 = tns({
                     container: '.view-noticias .news-wrap',
                     mode: 'carousel',
                     "mouseDrag": true,
@@ -202,7 +190,7 @@
                         0: {
                             controls: false,
                             nav: false,
-                            gutter: 10,
+                            gutter: -40,
                             edgePadding: 40,
                             items: 1,
                             center: true
@@ -289,7 +277,7 @@
 
             var highlightSearchInNode = function(parentNode, search) {
                 forEach(parentNode, function(node) {
-                    if (node.nodeType === 1) {
+						if (node.nodeType === 1) {
                         highlightSearchInNode(node, search);
                     } else if (
                         node.nodeType === 3 &&
