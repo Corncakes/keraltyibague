@@ -48,7 +48,7 @@ $enable-responsive-font-sizes: true;
 $enable-shadows: false;
 $enable-gradients: false;
 // Breadcrumbs (Works only on Bootstrap 5+)
-// $breadcrumb-divider: quote(">");
+$breadcrumb-divider: quote("|");
 @font-face {
     font-family: 'proxima_novaregular';
     src: url('../fonts/fontsfree-net-proximanova-regular-webfont.woff2') format('woff2'),

@@ -92,10 +92,7 @@ a {
 	background: $primary-shade  !important;
 }
 
-.site-footer {
-	/*background: $accent-shade !important;*/
-	background-color: #002e58 !important;
-}
+
 
 .menu--main li a {
 	color: $primary-shade;
@@ -142,7 +139,7 @@ h2 {
 }
 
 p {
-	font: normal normal normal 16px/25px proxima_novaregular;
+	font: normal normal normal 18px/25px proxima_novaregular;
 
 	@include mobile {
 		font-size: 14px !important;
@@ -198,9 +195,12 @@ p {
 		color: #fff;
 		background-color: #008767;
 		border-radius: 25px;
-		padding: 0.7rem 2rem;
+		padding: 0.7rem 3rem;
 		line-height: 1;
-
+		@include mobile{
+			padding: 0.7rem 2rem;
+		
+		}
 		&:hover {
 			color: #fff !important;
 			background: #00615C;
@@ -476,16 +476,20 @@ p {
 	.tns-slider {
 		.tns-item {
 			position: relative;
-
+			@include mobile{
+				display:flex;
+				overflow:hidden;
+			}
 			img {
 				width: 100%;
 				height: auto;
 
 				@include mobile {
 					height: 480px !important;
-					width: auto !important;
+					
 					max-width: none;
-
+					object-fit:cover;
+					object-position:center-center;
 				}
 			}
 
@@ -590,17 +594,19 @@ p {
 
 		button {
 			position: relative;
-			width: 20px;
-			height: 20px;
+			width: 20px !important;
+			height: 20px !important;
+			all:unset;
+			display:block;
 			border-radius: 50%;
-			border: 0;
 			background: #ffffff;
+			border: 1px solid #002E58;
 			margin: 0 0.5rem !important;
 			flex: none;
-
+			transition:all 0.3s ease-out;
 			@include mobile {
 				width: 16px !important;
-				height: 16px;
+				height: 16px !important;
 				margin: 0 0.35rem !important;
 
 			}
@@ -614,49 +620,26 @@ p {
 			}
 
 			&.tns-nav-active {
-
-                background: #ffffff;
-
-                border: 1px solid #002E58;
-
-                width: 20px;
-
-                height: 20px;
-
+                background: #ffffff00;
                 position: relative;
-
-                top: 0px;
-
-                left: 0px;
-
-
-
-
                 @include mobile {
 
-                    width: 12px !important;
-
-                    height: 12px;
-
-
-
-
                     &:after {
-                        width: 16px !important;
-                        height: 16px !important;
+                        width: 12px !important;
+                        height: 12px !important;
                     }
                 }
 
                 &:after {
                     content: "";
                     display: block;
-                    width: 16px;
+                    width: 16px ;
                     height: 16px;
                     border-radius: 50%;
                     background:#002E58;
                     position: absolute;
-                    top: 1px;
-                    left: 1px;
+                    top: 2px;
+                    left: 2px;
                 }
             }
 		}
@@ -780,7 +763,15 @@ p {
 /* PARAGRAPHS TEXTO CON ICONO
 --------------------------------------------------*/
 
-.paragraph--type--texto-con-icono {}
+.paragraph--type--texto-con-icono {
+	.icono{
+		img{
+			@include but-mobile{
+				margin:1em;
+			}
+		}
+	}
+}
 
 
 /* PARAGRAPHS PROMOCIONA PAGINAS
@@ -1319,7 +1310,7 @@ p {
 				color: white;
 				align-items: center;
 				justify-content: center;
-				display: flex;
+				display: block;
 
 				&:hover {
 					background: #2cbe9e;
@@ -1415,11 +1406,20 @@ p {
 	}
 
 	.title {
-		padding: 0.5rem 1rem;
+		margin: 0.5rem 1rem;
 		font: normal normal bold 18px/25px proxima_novaregular;
 		letter-spacing: 0px;
 		color: #151D41;
 		line-height: 1.2;
+		@include mobile{
+			margin: 0.5rem 1rem 0 1rem;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			max-width: 100%;
+			overflow: hidden;
+		}
 	}
 
 	.body {
@@ -1667,15 +1667,15 @@ p {
 
 footer {
 	&.site-footer {
-		/*background: transparent url(../images/trazado.png) center top no-repeat !important;*/
-		background-size: cover !important;
+		background-color: #002e58 !important;
 		padding-top: 1rem;
-
+		
 		.container-fluid {
 			.site-footer__top {
 				.row {
-					div {
+					& > div {
 						@include mobile {
+							margin-bottom:0.8em;
 							&:last-child {
 								order: -1;
 								display: flex;
@@ -1739,9 +1739,10 @@ footer {
 										letter-spacing: 0px;
 										color: #FFFFFF;
 										padding: 0.4rem 0;
-										line-height: 2;
+										line-height: 1.6;
 										@include mobile{
 											padding: 0 0 0 0.4rem;
+											line-height: 1.8;
 										}
 										&:hover {
 											text-decoration: underline !important;
@@ -2071,6 +2072,7 @@ footer {
 .breadcrumb {
 
 	.breadcrumb-item {
+	
 		a {
 			font: normal normal normal 14px/35px proxima_novaregular;
 			letter-spacing: 0px;
@@ -2390,7 +2392,11 @@ footer {
 
 	.more-link {
 		background-color: #f5f5f5;
-
+		padding:0.7em 3em 3em 3em;
+			@include mobile{
+				padding:0.7em 2em 2em 2em;
+			}
+		
 		a {
 			background-color: #0071A3;
 
@@ -2515,7 +2521,7 @@ footer {
 	.especialidades {
 		background-color: #f5f5f5;
 		/*background-image: linear-gradient(to bottom, rgb(219, 219, 219), rgba(245,245,245));*/
-
+		
 		.views-view-grid.horizontal {
 			.row {
 				justify-content: center;
@@ -2868,7 +2874,7 @@ footer {
 			}
 
 			.boton {
-				margin: 0 0.8rem;
+				margin: 0 auto;
 
 				@include mobile {
 					margin: 1.5em auto;
@@ -2967,13 +2973,7 @@ footer {
 
 			.texto {
 				border-bottom: 1px solid #ddd;
-				margin-bottom: 2.5rem;
-				/*overflow-y: scroll;
-			height:46vh;
-			@include mobile{
-				overflow:unset;
-				height:auto;
-				}*/
+			
 			}
 
 
@@ -3114,7 +3114,9 @@ footer {
 #block-views-block-especialistas-block-3 {
 	@extend #block-views-block-especialistas-block-2;
 }
-
+#block-views-block-especialistas-block-4 {
+	@extend #block-views-block-especialistas-block-2;
+}
 .page-view-especialistas {
 	.view-display-id-page_1 {
 		margin: 3em auto;
@@ -3173,7 +3175,9 @@ footer {
 					width: 137px;
 					height: 27px;
 					position:relative;
-					bottom:-2px;
+					@include but-mobile{
+						bottom:-2px;
+					}
 				}
 			}
 		}
@@ -3216,6 +3220,14 @@ footer {
 
 			img {
 				margin: 0 !important;
+			}
+			&:nth-child(3) {
+				img{
+					@include but-mobile{
+						position:relative;
+						bottom:-4px;
+					}
+				}
 			}
 		}
 	}
